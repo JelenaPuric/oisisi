@@ -1,6 +1,7 @@
 package Model;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 
 public class Profesor {
@@ -16,6 +17,7 @@ public class Profesor {
 	private String brojLicneKarte;
 	private String titula;
 	private String zvanja;
+	private ArrayList<Predmet> profNaPredmetima;
 
 	public String getPrezime() {
 		return Prezime;
@@ -25,6 +27,12 @@ public class Profesor {
 	}
 	public String getIme() {
 		return Ime;
+	}
+	public ArrayList<Predmet> getProfNaPredmetima() {
+		return profNaPredmetima;
+	}
+	public void setProfNaPredmetima(ArrayList<Predmet> profNaPredmetima) {
+		this.profNaPredmetima = profNaPredmetima;
 	}
 	public void setIme(String ime) {
 		Ime = ime;
@@ -78,8 +86,23 @@ public class Profesor {
 		this.zvanja = zvanja;
 	}
 	
+	public Profesor(String prezime, String ime, String adresaStanovanja, LocalDateTime datum, String kontaktTel,
+			String email, String adresaKancelarije, String brojLicneKarte, String titula, String zvanja,
+			ArrayList<Predmet> profNaPredmetima) {
+		super();
+		Prezime = prezime;
+		Ime = ime;
+		this.adresaStanovanja = adresaStanovanja;
+		this.datum = datum;
+		this.kontaktTel = kontaktTel;
+		this.email = email;
+		this.adresaKancelarije = adresaKancelarije;
+		this.brojLicneKarte = brojLicneKarte;
+		this.titula = titula;
+		this.zvanja = zvanja;
+		this.profNaPredmetima = profNaPredmetima;
+	}
 	
-
 	public Profesor(String prezime, String ime, String adresaStanovanja, LocalDateTime datum, String kontaktTel,
 			String email, String adresaKancelarije, String brojLicneKarte, String titula, String zvanja) {
 		super();
@@ -93,8 +116,10 @@ public class Profesor {
 		this.brojLicneKarte = brojLicneKarte;
 		this.titula = titula;
 		this.zvanja = zvanja;
-	
+		this.profNaPredmetima = new ArrayList<Predmet>();
 		
 	}
+
+	
 	
 }
