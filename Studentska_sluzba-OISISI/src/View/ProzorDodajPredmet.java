@@ -13,6 +13,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import Kontroleri.DugmeOdustaniPredmetKontroler;
+import Kontroleri.DugmePotvrdiPredmetKontroler;
+
 
 
 
@@ -70,8 +73,8 @@ public class ProzorDodajPredmet extends JFrame{
 		lblProfesor= new JLabel("Profesor*");
 		lblEspbBodovi= new JLabel("ESPB bodovi*");
 	
-		btnPotvrdi= new JButton("Potvrdi");
-		btnOdustani= new JButton("Odustani");
+		btnPotvrdi= new JButton(new DugmePotvrdiPredmetKontroler());
+		btnOdustani= new JButton(new DugmeOdustaniPredmetKontroler());
 		
 		
 		txtSifraPredmeta= new JTextField();
