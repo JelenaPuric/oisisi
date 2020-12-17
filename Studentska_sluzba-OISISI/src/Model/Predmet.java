@@ -80,6 +80,10 @@ public class Predmet {
 		this.poloziliPredmet = poloziliPredmet;
 		this.nisuPoloziliPredmet = nisuPoloziliPredmet;
 	}
+	public Predmet(String sifraPredmeta2, String nazivPredmeta2, Semestar semestar2, TrenutnaGodina godina,
+			String predmetniProfesor, int eSPB) {
+		// TODO Auto-generated constructor stub
+	}
 	
 	
 	
