@@ -28,7 +28,7 @@ public class ProzorDodajEntitetKontroler extends AbstractAction{
 		}
 		else
 		{
-			
+			ProzorDodajPredmet.getInstance().show();
 		}
 		
 		
