@@ -7,10 +7,8 @@ import java.time.format.DateTimeFormatter;
 
 import javax.swing.AbstractAction;
 
-import Enums.Status;
-import Enums.TrenutnaGodina;
 import Model.Profesor;
-import Model.Student;
+
 import View.MyWindow;
 import View.ProzorDodajProfesora;
 

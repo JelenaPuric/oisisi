@@ -86,9 +86,10 @@ public class Model {
 			{
 				return false;
 			}
-			profesori.add(p);
+			
 		
 		}
+		profesori.add(p);
 		return true;
 	}
 	

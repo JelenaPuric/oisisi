@@ -10,6 +10,8 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import Kontroleri.ProzorDodajEntitetKontroler;
+
 public class ToolBar extends JPanel{
 	
 	private JButton dugmeDodaj;
@@ -22,7 +24,7 @@ public class ToolBar extends JPanel{
 	{
 		this.setLayout(new BorderLayout());
 		
-	    dugmeDodaj= new JButton("Dodaj");
+	    dugmeDodaj= new JButton(new ProzorDodajEntitetKontroler());
 		dugmeIzmeni= new JButton("Izmeni");
 		dugmeIzbrisi= new JButton("Izbrisi");
 		dugmePretrazi= new JButton("Pretrazi");
