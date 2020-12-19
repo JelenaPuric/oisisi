@@ -16,6 +16,8 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
+import Kontroleri.DugmeOdustaniIzmenuProfesoraKontroler;
+import Kontroleri.DugmePotvrdiIzmenuProfesora;
 import Model.Predmet;
 
 public class ProzorIzmenaProfesora extends JFrame{
@@ -112,8 +114,8 @@ public class ProzorIzmenaProfesora extends JFrame{
 		  txtZvanje.setPreferredSize(dim);
 	
 	
-		  potvrdi=new JButton("Potvrdi");
-		  odustani=new JButton("Odustani");
+		  potvrdi=new JButton(new DugmePotvrdiIzmenuProfesora());
+		  odustani=new JButton(new DugmeOdustaniIzmenuProfesoraKontroler());
 		
 		  
 		  pnlIme.setLayout(new FlowLayout());
