@@ -10,6 +10,7 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import Kontroleri.IzmenaProfesoraKontroler;
 import Kontroleri.ProzorDodajEntitetKontroler;
 
 public class ToolBar extends JPanel{
@@ -25,7 +26,7 @@ public class ToolBar extends JPanel{
 		this.setLayout(new BorderLayout());
 		
 	    dugmeDodaj= new JButton(new ProzorDodajEntitetKontroler());
-		dugmeIzmeni= new JButton("Izmeni");
+		dugmeIzmeni= new JButton(new IzmenaProfesoraKontroler());
 		dugmeIzbrisi= new JButton("Izbrisi");
 		dugmePretrazi= new JButton("Pretrazi");
 		poljePretrazi= new JTextField();
