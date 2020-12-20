@@ -7,6 +7,9 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+
+import Model.Profesor;
+
 import javax.swing.JScrollPane;  
 
 
@@ -116,5 +119,14 @@ public class CentralniPanel extends JPanel{
 		this.dtmPredmeti = dtmPredmeti;
 	}
 	
+	public static void popuniTabeluProfesor()
+	{
+		for(int i=0; i<MyWindow.getInstance().getModel().getProfesori().size();i++)
+		{
+		Profesor p= MyWindow.getInstance().getModel().getProfesori().get(i);
+		Object[] dataProf= {p.getIme(), p.getPrezime(), p.getTitula(), p.getZvanja()};
+		MyWindow.getInstance().getCentralniPanel().getDtmProfesori().addRow(dataProf);
+		}
+	}
 	
 }

@@ -31,6 +31,7 @@ public class MyWindow extends JFrame  {
 		 this.setLayout(new BorderLayout());
 		  centralniPanel=new CentralniPanel();
 		  setPreferredSize(new Dimension(500,500));
+		  this.addWindowListener(new Kontroleri.WindowListener());
 		  pack();
 		  
 		  setJMenuBar(new MenuBar());
