@@ -10,6 +10,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import Kontroleri.PotvrdiBrisanjeKontroler;
+
 
 
 
@@ -51,7 +53,7 @@ private static ProzorObrisiEntitet instance;
 		
 		setTitle("Brisanje "+entitet);
 		lblporuka= new JLabel("Da li ste sigurni da zelite da obrisete " +entitet+"?");
-		dugmeDa= new JButton("Da");
+		dugmeDa= new JButton(new PotvrdiBrisanjeKontroler());
 		dugmeNe= new JButton("Ne");
 		
 		dugmeNe.addActionListener(new ActionListener() { 
