@@ -1,5 +1,6 @@
 package Model;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Model {
@@ -159,6 +160,29 @@ public class Model {
 	}
 	return null;
 	}
+
+
+	public ArrayList<Ocena> getOcene() {
+		return ocene;
+	}
+
+
+	public void setOcene(ArrayList<Ocena> ocene) {
+		this.ocene = ocene;
+	}
+
+
+	public ArrayList<Student> getStudenti() {
+		return studenti;
+	}
+
+
+	public void setStudenti(ArrayList<Student> studenti) {
+		this.studenti = studenti;
+	}
+
+
+	
 	
 	
 	
