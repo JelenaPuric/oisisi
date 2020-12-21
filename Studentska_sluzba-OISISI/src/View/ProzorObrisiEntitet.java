@@ -12,6 +12,7 @@ import javax.swing.JPanel;
 
 
 
+
 public class ProzorObrisiEntitet extends JFrame{
 	
 	private JLabel lblporuka;
