@@ -118,4 +118,5 @@ private static ProzorObrisiEntitet instance;
 	public static void setInstance(ProzorObrisiEntitet instance) {
 		ProzorObrisiEntitet.instance = instance;
 	}
+	
 }
