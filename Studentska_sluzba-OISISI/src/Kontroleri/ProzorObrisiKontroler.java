@@ -22,10 +22,19 @@ public class ProzorObrisiKontroler extends AbstractAction {
 				
 			}	
 		}
+		else if(index==1)
+		{
+			int ind=MyWindow.getInstance().getCentralniPanel().getTblProfesori().getSelectedRow();
+			if(ind>=0) 
+			{
+				
+				ProzorObrisiEntitet.getInstance("profesora").show();
+				
+			}	
+		}
 		
 		
-		
-		else if( index==2) 
+		else 
 		{
 			int ind=MyWindow.getInstance().getCentralniPanel().getTblPredmeti().getSelectedRow();
 			if(ind>=0) 
