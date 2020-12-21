@@ -31,7 +31,11 @@ public class PotvrdiBrisanjeKontroler extends AbstractAction {
 				}
 				else if(index==1)
 				{
-					
+					MyWindow.getInstance().getCentralniPanel().getTblProfesori().getSelectedRow();
+					if(index>=0)
+					{
+						MyWindow.getInstance().getCentralniPanel().getDtmProfesori().removeRow(index);
+					}
 				}
 				else 
 				{
