@@ -9,6 +9,7 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 import Model.Profesor;
+import Model.Student;
 
 import javax.swing.JScrollPane;  
 
@@ -117,6 +118,19 @@ public class CentralniPanel extends JPanel{
 
 	public void setDtmPredmeti(DefaultTableModel dtmPredmeti) {
 		this.dtmPredmeti = dtmPredmeti;
+	}
+	
+	public static void loadTableStudents() 
+	{
+		for(int i=0; i<MyWindow.getInstance().getModel().getStudenti().size(); i++) 
+		{
+			Student s=MyWindow.getInstance().getModel().getStudenti().get(i);
+			//	Object[] data= {"Indeks","Ime","Prezime","Godina studija","Status","Prosek"};
+
+			Object[] data= {s.getIndex(),s.getIme(),s.getPrezime(),s.getGodina(),s.getStatus(),s.getProsjecnaOcjena()};
+			MyWindow.getInstance().getCentralniPanel().getDtmStudenti().addRow(data);
+			
+		}
 	}
 	
 	public static void popuniTabeluProfesor()
