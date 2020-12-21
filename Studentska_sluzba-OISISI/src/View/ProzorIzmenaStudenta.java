@@ -17,6 +17,8 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
+import Kontroleri.DugmePotvrdiIzmenaKontroler;
+
 
 public class ProzorIzmenaStudenta extends JFrame
 {
@@ -114,7 +116,7 @@ public class ProzorIzmenaStudenta extends JFrame
 		  lblNacinFinansiranja=new JLabel("Način finansiranja*");
 		  nacinFinansiranja=new JComboBox<String>();
 		  nacinFinansiranja.setPreferredSize(dim);
-		  potvrdi=new JButton("Potvrdi");
+		  potvrdi=new JButton(new DugmePotvrdiIzmenaKontroler());
 		  odustani=new JButton("Odustani");
 		  odustani.addActionListener(new ActionListener() {
 			
