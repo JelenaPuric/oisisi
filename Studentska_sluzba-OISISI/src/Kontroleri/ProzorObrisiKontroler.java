@@ -12,7 +12,20 @@ public class ProzorObrisiKontroler extends AbstractAction {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		int index=MyWindow.getInstance().getCentralniPanel().getTabbedPane().getSelectedIndex();
-		if( index==2) 
+		if(index==0)
+		{
+			int ind=MyWindow.getInstance().getCentralniPanel().getTblStudenti().getSelectedRow();
+			if(ind>=0) 
+			{
+				
+				ProzorObrisiEntitet.getInstance("studenta").show();
+				
+			}	
+		}
+		
+		
+		
+		else if( index==2) 
 		{
 			int ind=MyWindow.getInstance().getCentralniPanel().getTblPredmeti().getSelectedRow();
 			if(ind>=0) 
