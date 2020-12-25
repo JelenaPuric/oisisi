@@ -13,7 +13,7 @@ public class Predmet {
 	private String nazivPredmeta;
 	private Enums.Semestar semestar;
 	private Enums.TrenutnaGodina godinaStudija;
-	private Profesor profesor;
+	private String profesor;
 	private int espBodovi;
 	private ArrayList<Student> poloziliPredmet;
 	private ArrayList<Student> nisuPoloziliPredmet;
@@ -41,10 +41,10 @@ public class Predmet {
 	public void setGodinaStudija(TrenutnaGodina godinaStudija) {
 		this.godinaStudija = godinaStudija;
 	}
-	public Profesor getProfesor() {
+	public String getProfesor() {
 		return profesor;
 	}
-	public void setProfesor(Profesor profesor) {
+	public void setProfesor(String profesor) {
 		this.profesor = profesor;
 	}
 	public int getEspBodovi() {
@@ -68,7 +68,7 @@ public class Predmet {
 		this.nisuPoloziliPredmet = nisuPoloziliPredmet;
 	}
 	public Predmet(String sifraPredmeta, String nazivPredmeta, Semestar semestar, TrenutnaGodina godinaStudija,
-			Profesor profesor, int espBodovi, ArrayList<Student> poloziliPredmet,
+			String profesor, int espBodovi, ArrayList<Student> poloziliPredmet,
 			ArrayList<Student> nisuPoloziliPredmet) {
 		super();
 		this.sifraPredmeta = sifraPredmeta;
