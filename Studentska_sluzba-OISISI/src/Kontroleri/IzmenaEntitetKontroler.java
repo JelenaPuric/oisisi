@@ -6,9 +6,12 @@ import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 
 import Enums.TrenutnaGodina;
+import Enums.Semestar;
 import Enums.Status;
+import Model.Predmet;
 import Model.Student;
 import View.MyWindow;
+import View.ProzorIzmenaPredmeta;
 import View.ProzorIzmenaStudenta;
 
 public class IzmenaEntitetKontroler extends AbstractAction
@@ -70,8 +73,53 @@ public class IzmenaEntitetKontroler extends AbstractAction
 			}
 			
 		}
+		else if(index==2)
+		{
+			int ind=MyWindow.getInstance().getCentralniPanel().getTblPredmeti().getSelectedRow();
+			if(ind!=-1)
+			{
+				Predmet p=MyWindow.getInstance().getModel().getPredmeti().get(ind);
+				ProzorIzmenaPredmeta.getInstance().getTxtNazivPredmeta().setText(p.getNazivPredmeta());
+			    ProzorIzmenaPredmeta.getInstance().getTxtSifraPredmeta().setText(p.getSifraPredmeta());
+				ProzorIzmenaPredmeta.getInstance().getTxtPredmetniProfesor().setText(p.getProfesor());
+			    ProzorIzmenaPredmeta.getInstance().getTxtEspb().setText(String.valueOf(p.getEspBodovi()));
+			    
+			    if(p.getSemestar()==Semestar.letnji)
+			    {
+			    	ProzorIzmenaPredmeta.getInstance().getSemestar().setSelectedIndex(0);
+			    }
+			    else
+			    {
+			    	ProzorIzmenaPredmeta.getInstance().getSemestar().setSelectedIndex(1);
+			    }
+			    
+				if(p.getGodinaStudija()==TrenutnaGodina.prva) 
+				{
+					ProzorIzmenaPredmeta.getInstance().getGodinaStudija().setSelectedIndex(0);
+				}
+				else if(p.getGodinaStudija()==TrenutnaGodina.druga)
+				{
+					ProzorIzmenaPredmeta.getInstance().getGodinaStudija().setSelectedIndex(1);
+				}
+				else if(p.getGodinaStudija()==TrenutnaGodina.treca)
+				{
+					ProzorIzmenaPredmeta.getInstance().getGodinaStudija().setSelectedIndex(2);
+				}
+				else
+				{
+					ProzorIzmenaPredmeta.getInstance().getGodinaStudija().setSelectedIndex(3);
+				}
+				
+			
+				
+					ProzorIzmenaPredmeta.getInstance().show();
+				
+			}
+			}
+				
+		}
+		
 		
 	}
    
   
-}
