@@ -18,6 +18,8 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
+import Kontroleri.PotvrdiIzmenuPredmetaKontroler;
+
 
 
 public class ProzorIzmenaPredmeta extends JFrame 
@@ -88,7 +90,7 @@ public class ProzorIzmenaPredmeta extends JFrame
        txtEspb=new JTextField();
 	   txtEspb.setPreferredSize(dim);
 	   
-	   potvrdi=new JButton("Potvrdi");
+	   potvrdi=new JButton(new PotvrdiIzmenuPredmetaKontroler());
 	   odustani=new JButton("Odustani");
 	   odustani.addActionListener(new ActionListener() {
 			
