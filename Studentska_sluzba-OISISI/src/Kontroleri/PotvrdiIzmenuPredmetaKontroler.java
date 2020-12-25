@@ -73,7 +73,7 @@ public class PotvrdiIzmenuPredmetaKontroler extends AbstractAction
 	p.setProfesor(predmetniProfesor);
 	p.setEspBodovi(ESPB);
 	MyWindow.getInstance().getCentralniPanel().getDtmPredmeti().setRowCount(0);
-
+	MyWindow.getInstance().getCentralniPanel().loadTablePredmeti();
 	ProzorIzmenaPredmeta.getInstance().dispose();
 	}
 	
