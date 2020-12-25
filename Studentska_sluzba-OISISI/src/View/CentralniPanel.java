@@ -8,6 +8,7 @@ import javax.swing.JTabbedPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
+import Model.Predmet;
 import Model.Profesor;
 import Model.Student;
 
@@ -140,6 +141,19 @@ public class CentralniPanel extends JPanel{
 		Profesor p= MyWindow.getInstance().getModel().getProfesori().get(i);
 		Object[] dataProf= {p.getIme(), p.getPrezime(), p.getTitula(), p.getZvanja()};
 		MyWindow.getInstance().getCentralniPanel().getDtmProfesori().addRow(dataProf);
+		}
+	}
+	
+	public static void loadTablePredmeti() 
+	{
+		for(int i=0; i<MyWindow.getInstance().getModel().getPredmeti().size(); i++) 
+		{
+			Predmet p=MyWindow.getInstance().getModel().getPredmeti().get(i);
+			//Object[] data2= {"Šifra predmeta","Naziv predmeta","Broj ESPB bodova","Godina na kojoj se predmet izvodi","Semestar u kome se predmet izvodi"};
+
+			Object[] data2= {p.getSifraPredmeta(),p.getNazivPredmeta(),p.getEspBodovi(),p.getGodinaStudija(),p.getSemestar()};
+			MyWindow.getInstance().getCentralniPanel().getDtmPredmeti().addRow(data2);
+			
 		}
 	}
 	
