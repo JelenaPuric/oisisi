@@ -7,6 +7,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.KeyStroke;
 
+import Kontroleri.HelpKontroler;
 import Kontroleri.ProzorDodajEntitetKontroler;
 
 
@@ -56,7 +57,7 @@ public class MenuBar extends JMenuBar
 		editMenu.add(editItem);
 		editMenu.add(deleteItem);
 		
-		JMenuItem helpItem= new JMenuItem("Help");
+		JMenuItem helpItem= new JMenuItem(new HelpKontroler());
 		helpItem.setText("Help");
 		  KeyStroke keyStrokeToHelp
 		    = KeyStroke.getKeyStroke(KeyEvent.VK_H, KeyEvent.CTRL_DOWN_MASK);
