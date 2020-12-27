@@ -10,6 +10,7 @@ public class Model implements Serializable
 	private ArrayList<Ocena> ocene;
 	private ArrayList<Profesor> profesori;
 	private ArrayList<Predmet> predmeti;
+	private ArrayList<Student> studenti;
 
 	
 	public Model()
@@ -17,7 +18,7 @@ public class Model implements Serializable
 		ocene= new ArrayList<Ocena>();
 		profesori= new ArrayList<Profesor>();
 		predmeti= new ArrayList<Predmet>();
-	
+		studenti=new ArrayList<Student>();
 	}
 	
 	
@@ -52,8 +53,35 @@ public class Model implements Serializable
 	    this.ocene= ocene;
 		this.profesori = profesori;
 		this.predmeti = predmeti;
-		
+		this.studenti=studenti;
 	}
+	
+	public ArrayList<Student> getStudenti() {
+		return studenti;
+	}
+
+
+
+	public void setStudenti(ArrayList<Student> studenti) {
+		this.studenti = studenti;
+	}
+
+
+
+	public boolean dodajStudenta(Student student) 
+	{
+		for(int i=0; i<studenti.size(); i++) 
+		{
+			if(studenti.get(i).getIndex()==student.getIndex()) 
+			{
+				return false;
+			}
+		}
+		
+		studenti.add(student);
+		return true;
+		
+		}
 	
 	public boolean dodajOcenu(Ocena ocena)
 	{
