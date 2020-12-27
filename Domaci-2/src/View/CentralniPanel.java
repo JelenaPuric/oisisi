@@ -6,6 +6,9 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+
+import Model.Profesor;
+
 import javax.swing.JScrollPane;  
 
 
