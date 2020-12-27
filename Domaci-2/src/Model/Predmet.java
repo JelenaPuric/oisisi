@@ -16,6 +16,8 @@ public class Predmet implements Serializable{
 	private Enums.TrenutnaGodina godinaStudija;
 	private Profesor profesor;
 	private int espBodovi;
+	private ArrayList<Student> poloziliPredmet;
+	private ArrayList<Student> nisuPoloziliPredmet;
 
 	public String getSifraPredmeta() {
 		return sifraPredmeta;
@@ -55,10 +57,23 @@ public class Predmet implements Serializable{
 		this.espBodovi = espBodovi;
 		}
 	}
-
+ 
 	
+	public ArrayList<Student> getPoloziliPredmet() {
+		return poloziliPredmet;
+	}
+	public void setPoloziliPredmet(ArrayList<Student> poloziliPredmet) {
+		this.poloziliPredmet = poloziliPredmet;
+	}
+	public ArrayList<Student> getNisuPoloziliPredmet() {
+		return nisuPoloziliPredmet;
+	}
+	public void setNisuPoloziliPredmet(ArrayList<Student> nisuPoloziliPredmet) {
+		this.nisuPoloziliPredmet = nisuPoloziliPredmet;
+	}
 	public Predmet(String sifraPredmeta, String nazivPredmeta, Semestar semestar, TrenutnaGodina godinaStudija,
-			Profesor profesor, int espBodovi) {
+			Profesor profesor, int espBodovi, ArrayList<Student> poloziliPredmet,
+			ArrayList<Student> nisuPoloziliPredmet) {
 		super();
 		this.sifraPredmeta = sifraPredmeta;
 		this.nazivPredmeta = nazivPredmeta;
@@ -66,7 +81,8 @@ public class Predmet implements Serializable{
 		this.godinaStudija = godinaStudija;
 		this.profesor = profesor;
 		this.espBodovi = espBodovi;
-		
+		this.poloziliPredmet = poloziliPredmet;
+		this.nisuPoloziliPredmet = nisuPoloziliPredmet;
 	}
 	
 	
