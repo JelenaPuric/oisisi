@@ -28,6 +28,7 @@ public class CentralniPanel extends JPanel{
 		panelStudenti.setLayout(new BorderLayout());
 		panelProfesori.setLayout(new BorderLayout());
 		
+		
 		Object[] data= {"Indeks","Ime","Prezime","Godina studija","Status","Prosek"};
 		dtmStudenti=new DefaultTableModel(data,0);
 		
