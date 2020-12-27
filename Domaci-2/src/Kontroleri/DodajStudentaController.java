@@ -69,7 +69,7 @@ public class DodajStudentaController extends AbstractAction{
 	
 	
 	Student s= new Student(prezime,ime,date,adresaStanovanja,brojTelefona,Email,brojIndeksa,godinaUpisa,godina,status);
-//	MyWindow.getInstance().getModel().dodajStudenta(s);
+    MyWindow.getInstance().getModel().dodajStudenta(s);
 	Object[] data= {brojIndeksa,ime,prezime,trenutna,statusStr};
 	MyWindow.getInstance().getCentralniPanel().getDtmStudenti().addRow(data);
 	ProzorDodajStudenta.getInstance().dispose();
