@@ -1,5 +1,8 @@
 package Enums;
 
-public class Status {
-
+public enum Status
+{
+	B,
+	S;
+	
 }
