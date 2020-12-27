@@ -56,7 +56,7 @@ public class Predmet implements Serializable{
 		}
 	}
 
-	}
+	
 	public Predmet(String sifraPredmeta, String nazivPredmeta, Semestar semestar, TrenutnaGodina godinaStudija,
 			Profesor profesor, int espBodovi) {
 		super();
