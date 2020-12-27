@@ -12,6 +12,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import Kontroleri.DodajStudentaController;
+
 
 
 public class ProzorDodajStudenta extends JFrame
@@ -99,7 +101,7 @@ public class ProzorDodajStudenta extends JFrame
 	  lblNacinFinansiranja=new JLabel("Način finansiranja*");
 	  nacinFinansiranja=new JComboBox<String>();
 	  nacinFinansiranja.setPreferredSize(dim);
-	  potvrdi=new JButton("Potvrdi");
+	  potvrdi=new JButton(new DodajStudentaController());
 	  odustani=new JButton("Odustani");
 	  trenutnaGodinaStudija.addItem("I(prvo)");
 	  trenutnaGodinaStudija.addItem("II(druga)");
