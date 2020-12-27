@@ -65,6 +65,14 @@ public class MenuBar extends JMenuBar
 		  KeyStroke keyStrokeToAbout
 		    = KeyStroke.getKeyStroke(KeyEvent.VK_A, KeyEvent.CTRL_DOWN_MASK);
 		 aboutItem.setAccelerator(keyStrokeToAbout);
+		 
+		 //mneumonici
+		 newItem.setMnemonic(KeyEvent.VK_N);
+		 closeItem.setMnemonic(KeyEvent.VK_C);
+		 editItem.setMnemonic(KeyEvent.VK_E);
+		 deleteItem.setMnemonic(KeyEvent.VK_D);
+		 helpItem.setMnemonic(KeyEvent.VK_H);
+		 aboutItem.setMnemonic(KeyEvent.VK_A);
 		
 		helpMenu.add(helpItem);
 		helpMenu.add(aboutItem);
