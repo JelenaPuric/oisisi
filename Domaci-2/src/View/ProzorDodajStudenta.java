@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import Kontroleri.DodajStudentaController;
+import Kontroleri.DugmeOdustaniStudentKontroler;
 
 
 
@@ -102,7 +103,7 @@ public class ProzorDodajStudenta extends JFrame
 	  nacinFinansiranja=new JComboBox<String>();
 	  nacinFinansiranja.setPreferredSize(dim);
 	  potvrdi=new JButton(new DodajStudentaController());
-	  odustani=new JButton("Odustani");
+	  odustani=new JButton(new DugmeOdustaniStudentKontroler());
 	  trenutnaGodinaStudija.addItem("I(prvo)");
 	  trenutnaGodinaStudija.addItem("II(druga)");
 	  trenutnaGodinaStudija.addItem("III(treća)");
