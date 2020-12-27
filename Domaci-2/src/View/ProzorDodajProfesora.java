@@ -13,6 +13,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import Kontroleri.DugmeOdustaniProfestorKontroler;
+import Kontroleri.DugmePotvrdiProfesorKontroler;
+
 
 public class ProzorDodajProfesora extends JFrame{
 	
@@ -76,8 +79,8 @@ public class ProzorDodajProfesora extends JFrame{
 		lblBrojLicneKarte= new JLabel("Broj Licne Karte");
 		lblTitula= new JLabel("Titula");
 		lblZvanje= new JLabel("Zvanje");
-		btnPotvrdi= new JButton("Potvrdi");
-		btnOdustani= new JButton("Odustani");
+		btnPotvrdi= new JButton(new DugmePotvrdiProfesorKontroler());
+		btnOdustani= new JButton(new DugmeOdustaniProfestorKontroler());
 		
 		
 		txtIme= new JTextField();
