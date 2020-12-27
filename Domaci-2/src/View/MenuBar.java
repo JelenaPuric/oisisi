@@ -7,6 +7,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.KeyStroke;
 
+import Kontroleri.AboutKontroler;
 import Kontroleri.HelpKontroler;
 import Kontroleri.ProzorDodajEntitetKontroler;
 
@@ -63,7 +64,7 @@ public class MenuBar extends JMenuBar
 		    = KeyStroke.getKeyStroke(KeyEvent.VK_H, KeyEvent.CTRL_DOWN_MASK);
 		 helpItem.setAccelerator(keyStrokeToHelp);
 		 
-		JMenuItem aboutItem= new JMenuItem("About");
+		JMenuItem aboutItem= new JMenuItem(new AboutKontroler());
 		aboutItem.setText("About");
 		  KeyStroke keyStrokeToAbout
 		    = KeyStroke.getKeyStroke(KeyEvent.VK_A, KeyEvent.CTRL_DOWN_MASK);
