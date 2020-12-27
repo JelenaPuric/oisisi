@@ -6,9 +6,12 @@ import java.awt.Dimension;
 
 import javax.swing.JFrame;
 
+import Model.Model;
+
 
 public class MyWindow extends JFrame  {
 	
+	private Model model;
 	private ToolBar toolBar;
 	private CentralniPanel centralniPanel;
 	private static MyWindow instance;
@@ -27,6 +30,7 @@ public class MyWindow extends JFrame  {
 	public MyWindow()
 	{
 		this.setLayout(new BorderLayout());
+		model=new Model();
 		centralniPanel= new CentralniPanel();
 		add(centralniPanel,BorderLayout.CENTER);
 		setPreferredSize(new Dimension(500,500));
@@ -57,6 +61,12 @@ public class MyWindow extends JFrame  {
 	}
 	
 	
-	
+	public Model getModel() {
+		return model;
+	}
+
+	public void setModel(Model model) {
+		this.model = model;
+	}
 
 }
