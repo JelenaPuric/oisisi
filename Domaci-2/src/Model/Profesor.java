@@ -17,6 +17,7 @@ public class Profesor implements Serializable{
 	private String brojLicneKarte;
 	private String titula;
 	private String zvanja;
+	private ArrayList<Predmet> profNaPredmetima;
 
 	public String getPrezime() {
 		return Prezime;
@@ -79,6 +80,22 @@ public class Profesor implements Serializable{
 		this.zvanja = zvanja;
 	}
 	
+	public Profesor(String prezime, String ime, String adresaStanovanja, LocalDateTime datum, String kontaktTel,
+			String email, String adresaKancelarije, String brojLicneKarte, String titula, String zvanja,
+			ArrayList<Predmet> profNaPredmetima) {
+		super();
+		Prezime = prezime;
+		Ime = ime;
+		this.adresaStanovanja = adresaStanovanja;
+		this.datum = datum;
+		this.kontaktTel = kontaktTel;
+		this.email = email;
+		this.adresaKancelarije = adresaKancelarije;
+		this.brojLicneKarte = brojLicneKarte;
+		this.titula = titula;
+		this.zvanja = zvanja;
+		this.profNaPredmetima = profNaPredmetima;
+	}
 	
 	public Profesor(String prezime, String ime, String adresaStanovanja, LocalDateTime datum, String kontaktTel,
 			String email, String adresaKancelarije, String brojLicneKarte, String titula, String zvanja) {
@@ -93,6 +110,7 @@ public class Profesor implements Serializable{
 		this.brojLicneKarte = brojLicneKarte;
 		this.titula = titula;
 		this.zvanja = zvanja;
+		this.profNaPredmetima = new ArrayList<Predmet>();
 		
 		
 	}
