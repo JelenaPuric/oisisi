@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 import Enums.TrenutnaGodina;
-//import Enums.Status;
+import Enums.Status;
 
 public class Student implements Serializable {
 	
@@ -18,14 +18,14 @@ public class Student implements Serializable {
 	private String index;
 	private int godinaUpisa;
 	private TrenutnaGodina godina;
-	//private Status status;
+	private Status status;
 	private double prosjecnaOcjena;
 	//private ArrayList<Ocena> ocjene;
 	private ArrayList<Predmet> nepolozeniPredmeti;
 
 	
 	public Student(String prezime, String ime, LocalDateTime datumRodjenja, String adresaStanovanja, String telefon,
-			String email, String index, int godinaUpisa, TrenutnaGodina godina)
+			String email, String index, int godinaUpisa, TrenutnaGodina godina,Status status)
 	{
 		this.prezime = prezime;
 		this.ime = ime;
@@ -36,7 +36,7 @@ public class Student implements Serializable {
 		this.index = index;
 		this.godinaUpisa = godinaUpisa;
 		this.godina = godina;
-		//this.status = status;
+		this.status = status;
 		//this.ocjene=new ArrayList<Ocena>();
 		this.nepolozeniPredmeti=new ArrayList<Predmet>();
 	}
@@ -94,12 +94,12 @@ public class Student implements Serializable {
 	public void setGodina(TrenutnaGodina godina) {
 		this.godina = godina;
 	}
-	//public Status getStatus() {
-		//return status;
-	//}
-	//public void setStatus(Status status) {
-		//this.status = status;
-//	}
+	public Status getStatus() {
+		return status;
+	}
+	public void setStatus(Status status) {
+		this.status = status;
+	}
 	public double getProsjecnaOcjena() {
 		return prosjecnaOcjena;
 	}
