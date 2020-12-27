@@ -13,6 +13,7 @@ public class MyWindow extends JFrame  {
 	
 	private Model model;
 	private ToolBar toolBar;
+    private StatusBar statusBar;
 	private CentralniPanel centralniPanel;
 	private static MyWindow instance;
 	
@@ -35,12 +36,21 @@ public class MyWindow extends JFrame  {
 		add(centralniPanel,BorderLayout.CENTER);
 		setPreferredSize(new Dimension(500,500));
 		pack();
-		
-	
+		setJMenuBar(new MenuBar());
+	    statusBar=new StatusBar();
+	    add(statusBar,BorderLayout.SOUTH);
 		toolBar= new ToolBar();
 		add(toolBar,BorderLayout.NORTH);
 		
 		
+	}
+
+	public StatusBar getStatusBar() {
+		return statusBar;
+	}
+
+	public void setStatusBar(StatusBar statusBar) {
+		this.statusBar = statusBar;
 	}
 
 	public CentralniPanel getCentralniPanel() {
