@@ -7,6 +7,8 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.KeyStroke;
 
+import Kontroleri.ProzorDodajEntitetKontroler;
+
 
 
 public class MenuBar extends JMenuBar
@@ -22,7 +24,7 @@ public class MenuBar extends JMenuBar
 		helpMenu= new JMenu("Help");
 		
 		
-		JMenuItem newItem= new JMenuItem("New");
+		JMenuItem newItem= new JMenuItem(new ProzorDodajEntitetKontroler());
 		newItem.setText("New");
 		  KeyStroke keyStrokeToOpen
 		    = KeyStroke.getKeyStroke(KeyEvent.VK_N, KeyEvent.CTRL_DOWN_MASK);
