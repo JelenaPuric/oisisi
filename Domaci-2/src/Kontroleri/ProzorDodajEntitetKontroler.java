@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 
 import View.ProzorDodajProfesora;
+import View.ProzorDodajStudenta;
 import View.MyWindow;
 
 public class ProzorDodajEntitetKontroler extends AbstractAction{
@@ -17,7 +18,7 @@ public class ProzorDodajEntitetKontroler extends AbstractAction{
 		if(index==0) 
 		{
 			
-			//to do
+			ProzorDodajStudenta.getInstance().show();
 		}
 		else if(index==1) 
 		{
