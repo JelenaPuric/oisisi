@@ -12,6 +12,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import Kontroleri.DodajStudentaController;
+import Kontroleri.DugmeOdustaniStudentKontroler;
+
 
 
 public class ProzorDodajStudenta extends JFrame
@@ -99,8 +102,8 @@ public class ProzorDodajStudenta extends JFrame
 	  lblNacinFinansiranja=new JLabel("Način finansiranja*");
 	  nacinFinansiranja=new JComboBox<String>();
 	  nacinFinansiranja.setPreferredSize(dim);
-	  potvrdi=new JButton("Potvrdi");
-	  odustani=new JButton("Odustani");
+	  potvrdi=new JButton(new DodajStudentaController());
+	  odustani=new JButton(new DugmeOdustaniStudentKontroler());
 	  trenutnaGodinaStudija.addItem("I(prvo)");
 	  trenutnaGodinaStudija.addItem("II(druga)");
 	  trenutnaGodinaStudija.addItem("III(treća)");

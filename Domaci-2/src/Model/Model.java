@@ -7,19 +7,34 @@ import java.util.ArrayList;
 public class Model implements Serializable
 {
 	static final long serialVersionUID = 5546L;
-
+	private ArrayList<Ocena> ocene;
 	private ArrayList<Profesor> profesori;
 	private ArrayList<Predmet> predmeti;
+	private ArrayList<Student> studenti;
 
 	
 	public Model()
 	{
-
+		ocene= new ArrayList<Ocena>();
 		profesori= new ArrayList<Profesor>();
 		predmeti= new ArrayList<Predmet>();
-	
+		studenti=new ArrayList<Student>();
 	}
 	
+	
+	
+	public ArrayList<Ocena> getOcene() {
+		return ocene;
+	}
+
+
+
+	public void setOcene(ArrayList<Ocena> ocene) {
+		this.ocene = ocene;
+	}
+
+
+
 	public ArrayList<Profesor> getProfesori() {
 		return profesori;
 	}
@@ -33,15 +48,59 @@ public class Model implements Serializable
 		this.predmeti = predmeti;
 	}
 	
-	public Model(ArrayList<Student> studenti, ArrayList<Profesor> profesori, ArrayList<Predmet> predmeti) {
+	public Model(ArrayList<Student> studenti, ArrayList<Profesor> profesori, ArrayList<Predmet> predmeti, ArrayList<Ocena> ocene) {
 		super();
-	
+	    this.ocene= ocene;
 		this.profesori = profesori;
 		this.predmeti = predmeti;
-		
+		this.studenti=studenti;
 	}
 	
+	public ArrayList<Student> getStudenti() {
+		return studenti;
+	}
+
+
+
+	public void setStudenti(ArrayList<Student> studenti) {
+		this.studenti = studenti;
+	}
+
+
+
+	public boolean dodajStudenta(Student student) 
+	{
+		for(int i=0; i<studenti.size(); i++) 
+		{
+			if(studenti.get(i).getIndex()==student.getIndex()) 
+			{
+				return false;
+			}
+		}
+		
+		studenti.add(student);
+		return true;
+		
+		}
 	
+	public boolean dodajOcenu(Ocena ocena)
+	{
+		for(int i=0; i<ocene.size(); i++)
+		{
+			if(ocena.getPredmet().getSifraPredmeta()==ocene.get(i).getPredmet().getSifraPredmeta()) 
+			{
+				if(ocena.getStudent().getIndex()==ocene.get(i).getStudent().getIndex()) 
+				{
+					
+					return false;
+				}
+				
+			}
+		}
+		
+		ocene.add(ocena);
+		return true;
+	}
 	
 	public boolean dodajProfesora(Profesor p)
 	{
