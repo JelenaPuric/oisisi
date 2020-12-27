@@ -20,7 +20,7 @@ public class Student implements Serializable {
 	private TrenutnaGodina godina;
 	private Status status;
 	private double prosjecnaOcjena;
-	//private ArrayList<Ocena> ocjene;
+	private ArrayList<Ocena> ocjene;
 	private ArrayList<Predmet> nepolozeniPredmeti;
 
 	
@@ -37,7 +37,7 @@ public class Student implements Serializable {
 		this.godinaUpisa = godinaUpisa;
 		this.godina = godina;
 		this.status = status;
-		//this.ocjene=new ArrayList<Ocena>();
+		this.ocjene=new ArrayList<Ocena>();
 		this.nepolozeniPredmeti=new ArrayList<Predmet>();
 	}
 	public String getPrezime() {
