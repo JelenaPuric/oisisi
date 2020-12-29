@@ -35,6 +35,13 @@ public class Ocena {
 	public void setDatumPolaganjaPredmeta(LocalDateTime datumPolaganjaPredmeta) {
 		this.datumPolaganjaPredmeta = datumPolaganjaPredmeta;
 	}
+	public Ocena(Student student, Predmet predmet, int vrijednostOcjene, LocalDateTime datumPolaganjaPredmeta) {
+		super();
+		this.student = student;
+		this.predmet = predmet;
+		this.vrijednostOcjene = vrijednostOcjene;
+		this.datumPolaganjaPredmeta = datumPolaganjaPredmeta;
+	}
 	
 
 }

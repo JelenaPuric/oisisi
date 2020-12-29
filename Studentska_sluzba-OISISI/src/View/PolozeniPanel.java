@@ -52,7 +52,18 @@ public PolozeniPanel()
 	
 	
 }
-	
+
+
+public DefaultTableModel getDtmPolozeni() {
+	return dtmPolozeni;
+}
+
+
+public void setDtmPolozeni(DefaultTableModel dtmPolozeni) {
+	this.dtmPolozeni = dtmPolozeni;
+}
+
+
 
 
 }

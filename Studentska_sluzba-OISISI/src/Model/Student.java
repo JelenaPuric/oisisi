@@ -106,6 +106,24 @@ public class Student {
 	
 
 	}
+	public ArrayList<Ocena> getOcjene() {
+		return ocjene;
+	}
+	public void setOcjene(ArrayList<Ocena> ocjene) {
+		this.ocjene = ocjene;
+	}
+	
+	public void removePredmet(String sifra) 
+	{
+		
+		for(int i=0; i<nepolozeniPredmeti.size(); i++) 
+		{
+			if(nepolozeniPredmeti.get(i).getSifraPredmeta().equals(sifra)) 
+			{
+				nepolozeniPredmeti.remove(i);
+			}
+		}
+	}
 	
 	
 
