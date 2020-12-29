@@ -15,6 +15,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import Kontroleri.DugmeOdustaniUnosOcene;
+import Kontroleri.DugmePotvrdiUnosOceneKontroler;
+
 
 
 
@@ -59,8 +62,8 @@ public class ProzorUnosOcene extends JFrame {
 		lblnaziv= new JLabel("Naziv");
 		lblOcena= new JLabel("Ocena");
 		lbldatum= new JLabel("Datum");
-		btnPotvrdi= new JButton("Potvrdi");
-		btnOdustani= new JButton("Odustani");
+		btnPotvrdi= new JButton(new DugmePotvrdiUnosOceneKontroler());
+		btnOdustani= new JButton(new DugmeOdustaniUnosOcene());
 		
 		txtSifra= new JTextField();
 		txtSifra.setPreferredSize(dim);

@@ -9,6 +9,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
+import Kontroleri.DugmePolaganjeKontroler;
+
 
 public class NepolozeniPanel extends JPanel
 {
@@ -32,7 +34,7 @@ public class NepolozeniPanel extends JPanel
 		
 	btnDodaj=new JButton("Dodaj");
 	btnObrisi=new JButton("Obriši");
-	btnPolaganje=new JButton("Polaganje");
+	btnPolaganje=new JButton(new DugmePolaganjeKontroler());
 	
 	 JPanel levi=new JPanel(); 
 	 levi.setLayout(new FlowLayout(FlowLayout.LEFT));
