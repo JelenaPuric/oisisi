@@ -29,8 +29,8 @@ public class ProzorIzmenaProfesora extends JFrame{
 	  private DefaultTableModel dtmPredmeti;
 	  private JTextField txtIme;
 	  private JTextField txtPrezime;
-	  private JTextField txtTitula;
-	  private JTextField txtZvanje;
+	  private JComboBox<String> cmbTitula;
+	  private JComboBox<String> cmbZvanje;
 	  private JTextField txtDatumRodjenja;
 	  private JTextField txtAdresaStanovanja;
 	  private JTextField txtKontaktTelefon;
@@ -107,11 +107,24 @@ public class ProzorIzmenaProfesora extends JFrame{
 		  txtBrojLicneKarte=new JTextField();
 		  txtBrojLicneKarte.setPreferredSize(dim);
 		  lblTitula=new JLabel("Titula*");
-		  txtTitula=new JTextField();
-		  txtTitula.setPreferredSize(dim);
+		  cmbTitula=new JComboBox<String>();
+			 
 		  lblZvanje=new JLabel("Zvanje*");
-		  txtZvanje=new JTextField();
-		  txtZvanje.setPreferredSize(dim);
+		  cmbZvanje=new JComboBox<String>();
+		 
+		    cmbTitula.addItem("BSc");
+			cmbTitula.addItem("MSc");
+			cmbTitula.addItem("mr");
+			cmbTitula.addItem("dr");
+			cmbTitula.addItem("prof. dr");
+
+			cmbZvanje.addItem("saradnik u nastavi");
+			cmbZvanje.addItem("asistent");
+			cmbZvanje.addItem("asistent sa doktoratom");
+			cmbZvanje.addItem("docent");
+			cmbZvanje.addItem("vanredni profesor");
+			cmbZvanje.addItem("redovni profesor");
+			cmbZvanje.addItem("profesor emeritus");
 	
 	
 		  potvrdi=new JButton(new DugmePotvrdiIzmenuProfesora());
@@ -144,10 +157,10 @@ public class ProzorIzmenaProfesora extends JFrame{
 		  pnlBrojLicneKarte.add(txtBrojLicneKarte);
 		  pnlTitula.setLayout(new FlowLayout());
 		  pnlTitula.add(lblTitula);
-		  pnlTitula.add(txtTitula);
+		  pnlTitula.add(cmbTitula);
 		  pnlZvanje.setLayout(new FlowLayout());
 		  pnlZvanje.add(lblZvanje);
-		  pnlZvanje.add(txtZvanje);
+		  pnlZvanje.add(cmbZvanje);
 		  pnlDugme.setLayout(new FlowLayout());
 		  pnlDugme.add(potvrdi);
 		  pnlDugme.add(odustani);
@@ -249,20 +262,21 @@ public class ProzorIzmenaProfesora extends JFrame{
 		this.txtPrezime = txtPrezime;
 	}
 
-	public JTextField getTxtTitula() {
-		return txtTitula;
+	
+	public JComboBox<String> getCmbTitula() {
+		return cmbTitula;
 	}
 
-	public void setTxtTitula(JTextField txtTitula) {
-		this.txtTitula = txtTitula;
+	public void setCmbTitula(JComboBox<String> cmbTitula) {
+		this.cmbTitula = cmbTitula;
 	}
 
-	public JTextField getTxtZvanje() {
-		return txtZvanje;
+	public JComboBox<String> getCmbZvanje() {
+		return cmbZvanje;
 	}
 
-	public void setTxtZvanje(JTextField txtZvanje) {
-		this.txtZvanje = txtZvanje;
+	public void setCmbZvanje(JComboBox<String> cmbZvanje) {
+		this.cmbZvanje = cmbZvanje;
 	}
 
 	public JTextField getTxtDatumRodjenja() {

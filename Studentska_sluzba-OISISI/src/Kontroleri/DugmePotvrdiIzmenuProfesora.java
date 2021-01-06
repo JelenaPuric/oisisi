@@ -7,6 +7,8 @@ import java.time.format.DateTimeFormatter;
 
 import javax.swing.AbstractAction;
 
+import Enums.Titula;
+import Enums.Zvanje;
 import Model.Profesor;
 import View.MyWindow;
 import View.ProzorDodajProfesora;
@@ -26,12 +28,65 @@ public class DugmePotvrdiIzmenuProfesora extends AbstractAction{
 		String mail=ProzorDodajProfesora.getInstance().getTxtEmail().getText();
 		String adresaKancelarije=ProzorDodajProfesora.getInstance().getTxtAdresaStanovanja().getText();
 		String brojLicneKarte=ProzorDodajProfesora.getInstance().getTxtBrojLicneKarte().getText();
-		String titula=ProzorDodajProfesora.getInstance().getTxtTitula().getText();
-		String zvanje=ProzorDodajProfesora.getInstance().getTxtZvanje().getText();
+
 		
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		LocalDate datum=LocalDate.parse(datumRodjenja,formatter);
 		LocalDateTime dat=LocalDateTime.of(datum, LocalDateTime.now().toLocalTime());
+		
+		Titula titulaP;
+		int index= ProzorIzmenaProfesora.getInstance().getCmbTitula().getSelectedIndex();
+		if(index==0)
+		{
+			titulaP=Titula.BSc;
+		}
+		else if(index==1)
+		{
+			titulaP=Titula.MSc;
+		}
+		else if(index==2)
+		{
+			titulaP=Titula.mr;
+		}
+		else if(index==3)
+		{
+			titulaP=Titula.dr;
+		}
+		else 
+		{
+			titulaP=Titula.prof_dr;
+		}
+		
+		Zvanje zvanjeP;
+		int ind= ProzorIzmenaProfesora.getInstance().getCmbZvanje().getSelectedIndex();
+		if(index==0)
+		{
+			zvanjeP=Zvanje.saradnik_u_nastavi;
+		}
+		else if (index==1) {
+		
+			zvanjeP=Zvanje.asistent;
+		}
+		else if (index==2)
+		{
+			zvanjeP=Zvanje.asistent_sa_doktoratom;
+		}
+		else if(index==3)
+		{
+			zvanjeP=Zvanje.docent;
+		}
+		else if(index==4)
+		{
+			zvanjeP=Zvanje.vanredni_profesor;
+		}
+		else if(index==5)
+		{
+			zvanjeP=Zvanje.redovni_profesor;
+		}
+		else
+		{
+			zvanjeP=Zvanje.profesor_emertius;
+		}
 		
 		Profesor p=MyWindow.getInstance().getModel().nadjiProfesora(brojLicneKarte);
 		p.setIme(ime);
@@ -42,8 +97,8 @@ public class DugmePotvrdiIzmenuProfesora extends AbstractAction{
 		p.setEmail(mail);
 		p.setAdresaKancelarije(adresaKancelarije);
 		p.setBrojLicneKarte(brojLicneKarte);
-		p.setTitula(titula);
-		p.setZvanja(zvanje);
+		p.setTitula(titulaP);
+		p.setZvanja(zvanjeP);
 		
 		ProzorIzmenaProfesora.getInstance().dispose();
 		
