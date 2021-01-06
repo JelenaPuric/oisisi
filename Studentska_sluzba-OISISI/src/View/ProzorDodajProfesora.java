@@ -120,27 +120,27 @@ public class ProzorDodajProfesora extends JFrame{
 		JPanel levo= new JPanel();
 		levo.setLayout(new BoxLayout(levo,BoxLayout.Y_AXIS));
 		levo.add(lblIme);
-		levo.add(Box.createVerticalStrut(10));
+		levo.add(Box.createVerticalStrut(35));
 		levo.add(lblPrezime);
-		levo.add(Box.createVerticalStrut(10));
+		levo.add(Box.createVerticalStrut(35));
 		levo.add(lblDatumRodjenja);
-		levo.add(Box.createVerticalStrut(10));
+		levo.add(Box.createVerticalStrut(35));
 		levo.add(lblAdresaStanovanja);
-		levo.add(Box.createVerticalStrut(10));
+		levo.add(Box.createVerticalStrut(35));
 		levo.add(lblBrojTelefona);
-		levo.add(Box.createVerticalStrut(10));
+		levo.add(Box.createVerticalStrut(35));
 		levo.add(lblEmail);
-		levo.add(Box.createVerticalStrut(10));
+		levo.add(Box.createVerticalStrut(35));
 		levo.add(lblAdresaKancelarije);
-		levo.add(Box.createVerticalStrut(10));
+		levo.add(Box.createVerticalStrut(35));
 		levo.add(lblBrojLicneKarte);
-		levo.add(Box.createVerticalStrut(10));
+		levo.add(Box.createVerticalStrut(35));
 		levo.add(lblTitula);
-		levo.add(Box.createVerticalStrut(10));
+		levo.add(Box.createVerticalStrut(35));
 		levo.add(lblZvanje);
-		levo.add(Box.createVerticalStrut(10));
+		levo.add(Box.createVerticalStrut(35));
 		levo.add(btnPotvrdi);
-		levo.add(Box.createVerticalStrut(10));
+		levo.add(Box.createVerticalStrut(35));
 
 		
 
@@ -150,27 +150,27 @@ public class ProzorDodajProfesora extends JFrame{
 		desno.setLayout(new BoxLayout(desno,BoxLayout.Y_AXIS));
 		
 		desno.add(txtIme);
-		desno.add(Box.createVerticalStrut(10));
+		desno.add(Box.createVerticalStrut(30));
 		desno.add(txtPrezime);
-		desno.add(Box.createVerticalStrut(10));
+		desno.add(Box.createVerticalStrut(30));
 		desno.add(txtDatumRodjenja);
-		desno.add(Box.createVerticalStrut(10));
+		desno.add(Box.createVerticalStrut(30));
 		desno.add(txtAdresaStanovanja);
-		desno.add(Box.createVerticalStrut(10));
+		desno.add(Box.createVerticalStrut(30));
 		desno.add(txtBrojTelefona);
-		desno.add(Box.createVerticalStrut(10));
+		desno.add(Box.createVerticalStrut(30));
 		desno.add(txtEmail);
-		desno.add(Box.createVerticalStrut(10));
+		desno.add(Box.createVerticalStrut(30));
 		desno.add(txtAdresaKancelarije);
-		desno.add(Box.createVerticalStrut(10));
+		desno.add(Box.createVerticalStrut(30));
 		desno.add(txtBrojLicneKarte);
-		desno.add(Box.createVerticalStrut(10));
+		desno.add(Box.createVerticalStrut(30));
 		desno.add(cmbTitula);
 		desno.add(Box.createVerticalStrut(30));
 		desno.add(cmbZvanje);
-		desno.add(Box.createVerticalStrut(10));
+		desno.add(Box.createVerticalStrut(30));
 		desno.add(btnOdustani);
-		desno.add(Box.createVerticalStrut(10));
+		desno.add(Box.createVerticalStrut(30));
 		
 		mainPanel.add(levo);
 		mainPanel.add(desno);
