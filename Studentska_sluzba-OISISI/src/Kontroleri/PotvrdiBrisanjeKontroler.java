@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
 
+import File.ReadWrite;
 import View.MyWindow;
 import View.ProzorObrisiEntitet;
 
@@ -39,9 +40,15 @@ public class PotvrdiBrisanjeKontroler extends AbstractAction {
 				}
 				else 
 				{
-					//todo
+					int ind=MyWindow.getInstance().getCentralniPanel().getTblPredmeti().getSelectedRow();
+					if(ind>=0) 
+					{
+						
+						MyWindow.getInstance().getCentralniPanel().getDtmPredmeti().removeRow(ind);
+						MyWindow.getInstance().getModel().getPredmeti().remove(ind);
+					}
 				}
-				
+				ReadWrite.pisiFile("C:\\Users\\ljubi\\Documents\\GitHub\\oisisi\\Studentska_sluzba-OISISI\\src\\Data\\data.ss");
 				ProzorObrisiEntitet.getInstance(" ").dispose();
 				ProzorObrisiEntitet.setInstance(null);
 			}
