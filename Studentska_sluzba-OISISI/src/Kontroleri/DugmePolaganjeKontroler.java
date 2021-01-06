@@ -20,7 +20,11 @@ public class DugmePolaganjeKontroler extends AbstractAction{
 		ProzorUnosOcene.getInstance().getTxtSifra().setEditable(false);
 		ProzorUnosOcene.getInstance().getTxtSifra().setText(p.getNazivPredmeta());
 		ProzorUnosOcene.getInstance().getTxtNaziv().setEditable(false);
-		ProzorUnosOcene.getInstance().show();
+		if(indexp>=0)
+		{
+			ProzorUnosOcene.getInstance().show();
+			
+		}
 	}
 
 	public DugmePolaganjeKontroler()
