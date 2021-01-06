@@ -49,6 +49,8 @@ public class ProzorIzmenaProfesora extends JFrame{
 	  private JLabel lblZvanje;
 	  private JLabel lblAdresaKancelarije;
 	  private JLabel lblBrojLicneKarte;
+	  private JButton dodaj;
+	  private JButton ukloni;
 	  private static ProzorIzmenaProfesora instance;
 	  
 	  
@@ -177,10 +179,19 @@ public class ProzorIzmenaProfesora extends JFrame{
 		  mainPanel.add(pnlZvanje);
 		  mainPanel.add(pnlDugme);
 		  
+
+		  dodaj= new JButton("Dodaj predmet");
+		  ukloni= new JButton("Ukloni predmet");
+		  
+		  JPanel pnlb= new JPanel();
+		  pnlb.add(dodaj);
+		  pnlb.add(ukloni);
+		  
+		  
 		  tabbedPane=new JTabbedPane();
 		  
 		  
-		  Object[] naslovi= {"Naziv predmeta"};
+		  Object[] naslovi= {"Sifra", "Naziv","Godina studija","Semestar" };
 		  dtmPredmeti= new DefaultTableModel(naslovi,0);
 		  
 		  setLayout(new BorderLayout());
@@ -193,6 +204,7 @@ public class ProzorIzmenaProfesora extends JFrame{
 		    p.setLayout(new BorderLayout());
 		    JScrollPane sp= new JScrollPane(tblPredmeti);
 		    p.add(sp,BorderLayout.CENTER);
+		    p.add(pnlb,BorderLayout.NORTH);
 		    tabbedPane.add("Informacije",mainPanel);
 		    tabbedPane.add("Predmeti",p);
 		    

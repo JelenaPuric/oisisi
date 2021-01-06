@@ -73,7 +73,7 @@ public class IzmenaEntitetKontroler extends AbstractAction
 					ProzorIzmenaStudenta.getInstance().show();
 				
 			}
-			
+		}
 			else if(index==1)
 			{
 				int ind1=MyWindow.getInstance().getCentralniPanel().getTblProfesori().getSelectedRow();
@@ -97,7 +97,7 @@ public class IzmenaEntitetKontroler extends AbstractAction
 				}
 			}
 			
-		}
+		
 		else if(index==2)
 		{
 			int ind=MyWindow.getInstance().getCentralniPanel().getTblPredmeti().getSelectedRow();
