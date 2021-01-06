@@ -26,8 +26,8 @@ public class ProzorDodajProfesora extends JFrame{
 	private JTextField txtEmail;
 	private JTextField txtAdresaKancelarije;
 	private JTextField txtBrojLicneKarte;
-	private JTextField txtTitula;
-	private JTextField txtZvanje;
+	private JComboBox<String> cmbTitula;
+	private JComboBox<String> cmbZvanje;
 	
 	private JLabel lblIme;
 	private JLabel lblPrezime;
@@ -98,10 +98,22 @@ public class ProzorDodajProfesora extends JFrame{
 		txtAdresaStanovanja.setPreferredSize(dim);
 		txtBrojLicneKarte= new JTextField();
 		txtBrojLicneKarte.setPreferredSize(dim);
-		txtTitula= new JTextField();
-		txtTitula.setPreferredSize(dim);
-		txtZvanje= new JTextField();
-		txtZvanje.setPreferredSize(dim);
+		cmbTitula= new JComboBox<String>();
+		cmbZvanje= new JComboBox<String>();
+	
+		cmbTitula.addItem("BSc");
+		cmbTitula.addItem("MSc");
+		cmbTitula.addItem("mr");
+		cmbTitula.addItem("dr");
+		cmbTitula.addItem("prof. dr");
+
+		cmbZvanje.addItem("saradnik u nastavi");
+		cmbZvanje.addItem("asistent");
+		cmbZvanje.addItem("asistent sa doktoratom");
+		cmbZvanje.addItem("docent");
+		cmbZvanje.addItem("vanredni profesor");
+		cmbZvanje.addItem("redovni profesor");
+		cmbZvanje.addItem("profesor emeritus");
 
 		
 		
@@ -153,9 +165,9 @@ public class ProzorDodajProfesora extends JFrame{
 		desno.add(Box.createVerticalStrut(10));
 		desno.add(txtBrojLicneKarte);
 		desno.add(Box.createVerticalStrut(10));
-		desno.add(txtTitula);
-		desno.add(Box.createVerticalStrut(10));
-		desno.add(txtZvanje);
+		desno.add(cmbTitula);
+		desno.add(Box.createVerticalStrut(30));
+		desno.add(cmbZvanje);
 		desno.add(Box.createVerticalStrut(10));
 		desno.add(btnOdustani);
 		desno.add(Box.createVerticalStrut(10));
@@ -230,20 +242,22 @@ public class ProzorDodajProfesora extends JFrame{
 		this.txtBrojLicneKarte = txtBrojLicneKarte;
 	}
 
-	public JTextField getTxtTitula() {
-		return txtTitula;
+	
+
+	public JComboBox<String> getCmbTitula() {
+		return cmbTitula;
 	}
 
-	public void setTxtTitula(JTextField txtTitula) {
-		this.txtTitula = txtTitula;
+	public void setCmbTitula(JComboBox<String> cmbTitula) {
+		this.cmbTitula = cmbTitula;
 	}
 
-	public JTextField getTxtZvanje() {
-		return txtZvanje;
+	public JComboBox<String> getCmbZvanje() {
+		return cmbZvanje;
 	}
 
-	public void setTxtZvanje(JTextField txtZvanje) {
-		this.txtZvanje = txtZvanje;
+	public void setCmbZvanje(JComboBox<String> cmbZvanje) {
+		this.cmbZvanje = cmbZvanje;
 	}
 
 	public JLabel getLblIme() {
