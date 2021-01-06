@@ -50,6 +50,7 @@ public class CentralniPanel extends JPanel{
 		tblPredmeti= new JTable(dtmPredmeti);
 		
 		tblProfesori.setAutoCreateRowSorter(true);
+		tblPredmeti.setAutoCreateRowSorter(true);
 		
 		
 		JScrollPane spStudenti= new JScrollPane(tblStudenti);
