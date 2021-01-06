@@ -9,9 +9,11 @@ import Enums.TrenutnaGodina;
 import Enums.Semestar;
 import Enums.Status;
 import Model.Predmet;
+import Model.Profesor;
 import Model.Student;
 import View.MyWindow;
 import View.ProzorIzmenaPredmeta;
+import View.ProzorIzmenaProfesora;
 import View.ProzorIzmenaStudenta;
 
 public class IzmenaEntitetKontroler extends AbstractAction
@@ -70,6 +72,29 @@ public class IzmenaEntitetKontroler extends AbstractAction
 				
 					ProzorIzmenaStudenta.getInstance().show();
 				
+			}
+			
+			else if(index==1)
+			{
+				int ind=MyWindow.getInstance().getCentralniPanel().getTblProfesori().getSelectedRow();
+				if(ind>=0) {
+					
+					Profesor p= MyWindow.getInstance().getModel().getProfesori().get(ind);
+					ProzorIzmenaProfesora.getInstance().getTxtIme().setText(p.getIme());
+					ProzorIzmenaProfesora.getInstance().getTxtPrezime().setText(p.getPrezime());
+					//TODO datum format yyyy-mm-dd
+				//	ProzorIzmenaProfesora.getInstance().getTxtDatumRodjenja().setText(p.getDatum().toString());
+					ProzorIzmenaProfesora.getInstance().getTxtAdresaStanovanja().setText(p.getAdresaStanovanja());
+					ProzorIzmenaProfesora.getInstance().getTxtKontaktTelefon().setText(p.getKontaktTel());
+					ProzorIzmenaProfesora.getInstance().getTxtEmail().setText(p.getEmail());
+					ProzorIzmenaProfesora.getInstance().getTxtAdresaKancelarije().setText(p.getAdresaKancelarije());
+					ProzorIzmenaProfesora.getInstance().getTxtBrojLicneKarte().setText(p.getBrojLicneKarte());
+					int indexT= ProzorIzmenaProfesora.getInstance().getCmbTitula().getSelectedIndex();
+					ProzorIzmenaProfesora.getInstance().getCmbTitula().setSelectedIndex(indexT);
+					int indexZ= ProzorIzmenaProfesora.getInstance().getCmbZvanje().getSelectedIndex();
+					ProzorIzmenaProfesora.getInstance().getCmbZvanje().setSelectedIndex(indexZ);
+				ProzorIzmenaProfesora.getInstance().show();
+				}
 			}
 			
 		}
