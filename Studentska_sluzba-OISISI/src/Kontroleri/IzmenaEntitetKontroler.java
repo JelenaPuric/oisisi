@@ -76,10 +76,10 @@ public class IzmenaEntitetKontroler extends AbstractAction
 			
 			else if(index==1)
 			{
-				int ind=MyWindow.getInstance().getCentralniPanel().getTblProfesori().getSelectedRow();
-				if(ind>=0) {
+				int ind1=MyWindow.getInstance().getCentralniPanel().getTblProfesori().getSelectedRow();
+				if(ind1>=0) {
 					
-					Profesor p= MyWindow.getInstance().getModel().getProfesori().get(ind);
+					Profesor p= MyWindow.getInstance().getModel().getProfesori().get(ind1);
 					ProzorIzmenaProfesora.getInstance().getTxtIme().setText(p.getIme());
 					ProzorIzmenaProfesora.getInstance().getTxtPrezime().setText(p.getPrezime());
 					//TODO datum format yyyy-mm-dd
