@@ -3,6 +3,9 @@ package Model;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
+import Enums.Titula;
+import Enums.Zvanje;
+
 
 public class Profesor {
 
@@ -15,8 +18,8 @@ public class Profesor {
 	private String email;
 	private String adresaKancelarije;
 	private String brojLicneKarte;
-	private String titula;
-	private String zvanja;
+	private Titula titula;
+	private Zvanje zvanja;
 	private ArrayList<Predmet> profNaPredmetima;
 
 	public String getPrezime() {
@@ -73,21 +76,21 @@ public class Profesor {
 	public void setBrojLicneKarte(String brojLicneKarte) {
 		this.brojLicneKarte = brojLicneKarte;
 	}
-	public String getTitula() {
+	public Titula getTitula() {
 		return titula;
 	}
-	public void setTitula(String titula) {
-		this.titula = titula;
+	public void setTitula(Titula titulaP) {
+		this.titula = titulaP;
 	}
-	public String getZvanja() {
+	public Zvanje getZvanja() {
 		return zvanja;
 	}
-	public void setZvanja(String zvanja) {
-		this.zvanja = zvanja;
+	public void setZvanja(Zvanje zvanjeP) {
+		this.zvanja = zvanjeP;
 	}
 	
 	public Profesor(String prezime, String ime, String adresaStanovanja, LocalDateTime datum, String kontaktTel,
-			String email, String adresaKancelarije, String brojLicneKarte, String titula, String zvanja,
+			String email, String adresaKancelarije, String brojLicneKarte, Titula titula, Zvanje zvanja,
 			ArrayList<Predmet> profNaPredmetima) {
 		super();
 		Prezime = prezime;
@@ -104,7 +107,7 @@ public class Profesor {
 	}
 	
 	public Profesor(String prezime, String ime, String adresaStanovanja, LocalDateTime datum, String kontaktTel,
-			String email, String adresaKancelarije, String brojLicneKarte, String titula, String zvanja) {
+			String email, String adresaKancelarije, String brojLicneKarte, Titula titula, Zvanje zvanja) {
 		super();
 		Prezime = prezime;
 		Ime = ime;
