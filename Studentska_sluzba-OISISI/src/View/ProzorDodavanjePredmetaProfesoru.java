@@ -15,6 +15,8 @@ import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
 
+import Kontroleri.DugemPotvrdiDodavanjePredmetaProfesoruKontroler;
+import Kontroleri.DugmeOdustaniDodavanjePredmetaProfesoruKontroler;
 import Kontroleri.DugmePotvrdiIzmenuProfesora;
 import Model.Predmet;
 
@@ -62,8 +64,8 @@ public class ProzorDodavanjePredmetaProfesoru extends JFrame {
 		panelLabele.add(lblpredmeti);
 		add(panelLabele, BorderLayout.NORTH);
 		
-		btnPotvrdi= new JButton("Potvrdi");
-		btnOdustani= new JButton("Odustani");
+		btnPotvrdi= new JButton(new DugemPotvrdiDodavanjePredmetaProfesoruKontroler());
+		btnOdustani= new JButton(new DugmeOdustaniDodavanjePredmetaProfesoruKontroler());
 		
 		panelDugme.add(btnPotvrdi);
 		panelDugme.add(btnOdustani);
