@@ -16,6 +16,7 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
+import Kontroleri.DugmeDodajPredmetKontroler;
 import Kontroleri.DugmeOdustaniIzmenuProfesoraKontroler;
 import Kontroleri.DugmePotvrdiIzmenuProfesora;
 import Model.Predmet;
@@ -180,7 +181,7 @@ public class ProzorIzmenaProfesora extends JFrame{
 		  mainPanel.add(pnlDugme);
 		  
 
-		  dodaj= new JButton("Dodaj predmet");
+		  dodaj= new JButton(new DugmeDodajPredmetKontroler());
 		  ukloni= new JButton("Ukloni predmet");
 		  
 		  JPanel pnlb= new JPanel();
