@@ -19,6 +19,7 @@ import javax.swing.table.DefaultTableModel;
 import Kontroleri.DugmeDodajPredmetKontroler;
 import Kontroleri.DugmeOdustaniIzmenuProfesoraKontroler;
 import Kontroleri.DugmePotvrdiIzmenuProfesora;
+import Kontroleri.UklanjanjePredmetaSaProfesoraKontroler;
 import Model.Predmet;
 
 public class ProzorIzmenaProfesora extends JFrame{
@@ -182,7 +183,7 @@ public class ProzorIzmenaProfesora extends JFrame{
 		  
 
 		  dodaj= new JButton(new DugmeDodajPredmetKontroler());
-		  ukloni= new JButton("Ukloni predmet");
+		  ukloni= new JButton(new UklanjanjePredmetaSaProfesoraKontroler());
 		  
 		  JPanel pnlb= new JPanel();
 		  pnlb.add(dodaj);
