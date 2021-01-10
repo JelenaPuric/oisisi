@@ -11,6 +11,7 @@ import javax.swing.table.DefaultTableModel;
 
 import Kontroleri.DodavanjePredmetaStudentuKontroler;
 import Kontroleri.DugmePolaganjeKontroler;
+import Kontroleri.UklanjanjePredmetaStudentuKontroler;
 
 
 public class NepolozeniPanel extends JPanel
@@ -34,7 +35,7 @@ public class NepolozeniPanel extends JPanel
 		this.add(spNepolozeni,BorderLayout.CENTER);
 		
 	btnDodaj=new JButton(new DodavanjePredmetaStudentuKontroler());
-	btnObrisi=new JButton("Obriši");
+	btnObrisi=new JButton(new UklanjanjePredmetaStudentuKontroler());
 	btnPolaganje=new JButton(new DugmePolaganjeKontroler());
 	
 	 JPanel levi=new JPanel(); 
