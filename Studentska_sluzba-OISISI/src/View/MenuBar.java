@@ -8,6 +8,7 @@ import javax.swing.JMenuItem;
 import javax.swing.KeyStroke;
 
 import Kontroleri.AboutKontroler;
+import Kontroleri.CloseWindowKontroler;
 import Kontroleri.HelpKontroler;
 import Kontroleri.IzmenaEntitetKontroler;
 import Kontroleri.ProzorDodajEntitetKontroler;
@@ -35,7 +36,7 @@ public class MenuBar extends JMenuBar
 		 newItem.setAccelerator(keyStrokeToOpen);
 		 
 		 
-		JMenuItem closeItem= new JMenuItem("Close");
+		JMenuItem closeItem= new JMenuItem(new CloseWindowKontroler());
 		
 		  KeyStroke keyStrokeToClose
 		    = KeyStroke.getKeyStroke(KeyEvent.VK_C, KeyEvent.CTRL_DOWN_MASK);
