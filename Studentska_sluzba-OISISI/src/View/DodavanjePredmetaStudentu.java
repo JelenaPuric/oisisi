@@ -14,7 +14,7 @@ import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
 
-
+import Kontroleri.PotvrdiDodavanjePredmetaStudentuKontroler;
 import Model.Predmet;
 
 public class DodavanjePredmetaStudentu extends JFrame
@@ -51,7 +51,7 @@ public class DodavanjePredmetaStudentu extends JFrame
 	   mainPanel.add(spPredmeti,BorderLayout.CENTER);
 	   this.add(mainPanel,BorderLayout.CENTER);
 	   
-	   potvrdi= new JButton("Potvrdi");
+	   potvrdi= new JButton(new PotvrdiDodavanjePredmetaStudentuKontroler());
 	   odustani=new JButton("Odustani");
 	   odustani.addActionListener(new ActionListener() {
 			
