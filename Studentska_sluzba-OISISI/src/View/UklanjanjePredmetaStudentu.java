@@ -12,6 +12,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import Kontroleri.PotvrdiUklanjanjePredmetaStudentuKontroler;
+
 
 
 
@@ -45,7 +47,7 @@ public UklanjanjePredmetaStudentu()
 	 Dimension dim= new Dimension(300,200);
 	lblPoruka=new JLabel("Da li ste sigurni da želite da uklonite predmet?");
 	lblPoruka.setPreferredSize(dim);
-	dugmeDa=new JButton("Da");
+	dugmeDa=new JButton(new PotvrdiUklanjanjePredmetaStudentuKontroler());
 	dugmeNe=new JButton("Ne");
 	dugmeNe.addActionListener(new ActionListener() 
 	{
