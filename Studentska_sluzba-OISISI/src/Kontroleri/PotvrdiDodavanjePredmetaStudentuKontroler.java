@@ -29,7 +29,7 @@ public class PotvrdiDodavanjePredmetaStudentuKontroler extends AbstractAction
 			String linija=(String) DodavanjePredmetaStudentu.getInstance().getDtmPredmeti().getValueAt(indexi[i], 0);
 			String[] deloviLinije=linija.split("\\-");
 			Predmet p= MyWindow.getInstance().getModel().nadjiPredmet(deloviLinije[0]);
-			
+			stud.getNepolozeniPredmeti().add(p);
 			
 		}
 		DodavanjePredmetaStudentu.getInstance().dispose();
