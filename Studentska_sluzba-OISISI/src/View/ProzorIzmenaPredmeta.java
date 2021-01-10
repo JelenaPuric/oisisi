@@ -18,23 +18,25 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
+
 import Kontroleri.PotvrdiIzmenuPredmetaKontroler;
-
-
 
 public class ProzorIzmenaPredmeta extends JFrame 
 {
    private JTabbedPane tabbedPane;
    private JTable tblInformacije;
-   private JTable tblStudenti;
+   
    private DefaultTableModel dtmInformacije;
-   private DefaultTableModel dtmStudenti;
-   private JTextField txtNazivPredmeta;
    private JTextField txtSifraPredmeta;
-   private JComboBox<String> semestar;
+   private JTextField txtNazivPredmeta;
    private JComboBox<String> godinaStudija;
-   private JTextField txtPredmetniProfesor;
+   private JComboBox<String> semestar;
    private JTextField txtEspb;
+   private JTextField txtPredmetniProfesor;
+   
+   
+   private JButton plus;
+   private JButton minus;
    private JButton potvrdi;
    private JButton odustani;
    private JLabel lblNazivPredmeta;
@@ -62,33 +64,38 @@ public class ProzorIzmenaPredmeta extends JFrame
 	   setLayout(new BorderLayout());
 	   JPanel mainPanel=new JPanel();
 	   mainPanel.setLayout(new BoxLayout(mainPanel,BoxLayout.Y_AXIS));
-	   JPanel pnlNazivPredmeta=new JPanel();
 	   JPanel pnlSifraPredmeta=new JPanel();
-	   JPanel pnlSemestar=new JPanel();
+	   JPanel pnlNazivPredmeta=new JPanel();
 	   JPanel pnlGodinaStudija=new JPanel();
-	   JPanel pnlPredmetniProfesor=new JPanel();
+	   JPanel pnlSemestar=new JPanel();
 	   JPanel pnlEspb=new JPanel();
+	   JPanel pnlPredmetniProfesor=new JPanel();
 	   JPanel pnlDugme=new JPanel();
 	   
+	   
 	   Dimension dim= new Dimension(100,20);
-	   lblNazivPredmeta= new JLabel("Naziv predmeta*");
-       txtNazivPredmeta=new JTextField();
-	   txtNazivPredmeta.setPreferredSize(dim);
-	   lblSifraPredmeta= new JLabel("Šifra predmeta*");
+	   
+	   lblSifraPredmeta= new JLabel("Šifra*");
 	   txtSifraPredmeta=new JTextField();
 	   txtSifraPredmeta.setPreferredSize(dim);
+	   lblNazivPredmeta= new JLabel("Naziv*");
+       txtNazivPredmeta=new JTextField();
+	   txtNazivPredmeta.setPreferredSize(dim);
+	   lblGodinaStudija=new JLabel("Godina*");
+	   godinaStudija=new JComboBox<String>();
+	   godinaStudija.setPreferredSize(dim);
 	   lblSemestar=new JLabel("Semestar*");
 	   semestar=new JComboBox<String>();
 	   semestar.setPreferredSize(dim);
-	   lblGodinaStudija=new JLabel("Godina studija u kojoj se predmet izvodi*");
-	   godinaStudija=new JComboBox<String>();
-	   godinaStudija.setPreferredSize(dim);
-	   lblPredmetniProfesor= new JLabel("Predmetni profesor*");
-       txtPredmetniProfesor=new JTextField();
-	   txtPredmetniProfesor.setPreferredSize(dim);
-	   lblEspb= new JLabel("Broj ESPB bodova*");
+	   lblEspb= new JLabel("ESPB*");
        txtEspb=new JTextField();
 	   txtEspb.setPreferredSize(dim);
+	   lblPredmetniProfesor= new JLabel("Profesor*");
+       txtPredmetniProfesor=new JTextField();
+	   txtPredmetniProfesor.setPreferredSize(dim);
+	   
+	   plus=new JButton("+");
+	   minus=new JButton("-");
 	   
 	   potvrdi=new JButton(new PotvrdiIzmenuPredmetaKontroler());
 	   odustani=new JButton("Odustani");
@@ -108,66 +115,42 @@ public class ProzorIzmenaPredmeta extends JFrame
 		  semestar.addItem("Letnji");
 		  semestar.addItem("Zimski");
 		  
-		  pnlNazivPredmeta.setLayout(new FlowLayout());
-		  pnlNazivPredmeta.add(lblNazivPredmeta);
-		  pnlNazivPredmeta.add(txtNazivPredmeta);
+		 
 		  pnlSifraPredmeta.setLayout(new FlowLayout());
 		  pnlSifraPredmeta.add(lblSifraPredmeta);
 		  pnlSifraPredmeta.add(txtSifraPredmeta);
-		  pnlSemestar.setLayout(new FlowLayout());
-		  pnlSemestar.add(lblSemestar);
-		  pnlSemestar.add(semestar);
+		  pnlNazivPredmeta.setLayout(new FlowLayout());
+		  pnlNazivPredmeta.add(lblNazivPredmeta);
+		  pnlNazivPredmeta.add(txtNazivPredmeta);
 		  pnlGodinaStudija.setLayout(new FlowLayout());
 		  pnlGodinaStudija.add(lblGodinaStudija);
 		  pnlGodinaStudija.add(godinaStudija);
-	      pnlPredmetniProfesor.setLayout(new FlowLayout());
-		  pnlPredmetniProfesor.add(lblPredmetniProfesor);
-		  pnlPredmetniProfesor.add(txtPredmetniProfesor);
+		  pnlSemestar.setLayout(new FlowLayout());
+		  pnlSemestar.add(lblSemestar);
+		  pnlSemestar.add(semestar);
 		  pnlEspb.setLayout(new FlowLayout());
 		  pnlEspb.add(lblEspb);
 		  pnlEspb.add(txtEspb);
+		  pnlPredmetniProfesor.setLayout(new FlowLayout());
+		  pnlPredmetniProfesor.add(lblPredmetniProfesor);
+		  pnlPredmetniProfesor.add(txtPredmetniProfesor);
+		  pnlPredmetniProfesor.add(plus);
+		  pnlPredmetniProfesor.add(minus);
+		 
 	      pnlDugme.setLayout(new FlowLayout());
 		  pnlDugme.add(potvrdi);
 		  pnlDugme.add(odustani);
 		  
-		  mainPanel.add(pnlNazivPredmeta);
 		  mainPanel.add(pnlSifraPredmeta);
-		  mainPanel.add(pnlSemestar);
+		  mainPanel.add(pnlNazivPredmeta);
 		  mainPanel.add(pnlGodinaStudija);
-		  mainPanel.add(pnlPredmetniProfesor);
+		  mainPanel.add(pnlSemestar);
 		  mainPanel.add(pnlEspb);
+		  mainPanel.add(pnlPredmetniProfesor);
+		 
 		  mainPanel.add(pnlDugme);
-		  
-		  tabbedPane=new JTabbedPane();
-		  
-		  Object[] naslovi = {"Studenti koji su položili predmet"};
-		  dtmStudenti=new DefaultTableModel(naslovi,0);
-		  
-		  Object[] naslovi1 = {"Studenti koji nisu položili predmet"};
-		  dtmStudenti=new DefaultTableModel(naslovi1,0);
-		  
-		  setLayout(new BorderLayout());
-		  tblStudenti= new JTable(dtmStudenti);
-		  setPreferredSize(new Dimension(800,600));
-		  pack();
-		  
-		  JPanel p= new JPanel();
-		  p.setLayout(new BorderLayout());
-		  JPanel p1=new JPanel();
-		  p1.setLayout(new BorderLayout());
-		  JScrollPane sp= new JScrollPane(tblStudenti);
-		  p.add(sp,BorderLayout.CENTER);
-		  p1.add(sp,BorderLayout.CENTER);
-		  tabbedPane.add("Informacije",mainPanel);
-		  tabbedPane.add("Studenti koji su položili predmet",p);
-		  tabbedPane.add("Studenti koji nisu položili predmet",p1);
-		    
-		    
-		    
-			
-		  add(tabbedPane,BorderLayout.CENTER);
-		  
-		  
+		
+		  add(mainPanel,BorderLayout.CENTER);
 		  
    }
 
@@ -187,13 +170,8 @@ public void setTblInformacije(JTable tblInformacije) {
 	this.tblInformacije = tblInformacije;
 }
 
-public JTable getTblStudenti() {
-	return tblStudenti;
-}
 
-public void setTblStudenti(JTable tblStudenti) {
-	this.tblStudenti = tblStudenti;
-}
+
 
 public DefaultTableModel getDtmInformacije() {
 	return dtmInformacije;
@@ -203,13 +181,7 @@ public void setDtmInformacije(DefaultTableModel dtmInformacije) {
 	this.dtmInformacije = dtmInformacije;
 }
 
-public DefaultTableModel getDtmStudenti() {
-	return dtmStudenti;
-}
 
-public void setDtmStudenti(DefaultTableModel dtmStudenti) {
-	this.dtmStudenti = dtmStudenti;
-}
 
 public JTextField getTxtNazivPredmeta() {
 	return txtNazivPredmeta;
@@ -326,3 +298,4 @@ public void setLblEspb(JLabel lblEspb) {
    
    
 }
+
