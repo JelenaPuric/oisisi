@@ -18,7 +18,7 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
-
+import Kontroleri.DodavanjeProfesoraNaPredmetKontroler;
 import Kontroleri.PotvrdiIzmenuPredmetaKontroler;
 
 public class ProzorIzmenaPredmeta extends JFrame 
@@ -94,7 +94,7 @@ public class ProzorIzmenaPredmeta extends JFrame
        txtPredmetniProfesor=new JTextField();
 	   txtPredmetniProfesor.setPreferredSize(dim);
 	   
-	   plus=new JButton("+");
+	   plus=new JButton(new DodavanjeProfesoraNaPredmetKontroler());
 	   minus=new JButton("-");
 	   
 	   potvrdi=new JButton(new PotvrdiIzmenuPredmetaKontroler());
