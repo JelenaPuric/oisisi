@@ -13,7 +13,7 @@ import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
 
-
+import Kontroleri.PotvrdiDodavanjeProfesoraNaPredmetKontroler;
 import Model.Predmet;
 import Model.Profesor;
 
@@ -53,7 +53,7 @@ public class DodavanjeProfesoraNaPredmet extends JFrame{
 		  mainPanel.add(spProfesori,BorderLayout.CENTER);
 		  this.add(mainPanel,BorderLayout.CENTER);
 			   
-			   btnPotvrdi= new JButton("Potvrdi");
+			   btnPotvrdi= new JButton(new PotvrdiDodavanjeProfesoraNaPredmetKontroler());
 			   btnOdustani=new JButton("Odustani");
 			   btnOdustani.addActionListener(new ActionListener() {
 					
