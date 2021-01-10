@@ -43,8 +43,8 @@ public UklanjanjePredmetaSaProfesora()
 	 Dimension dim= new Dimension(300,200);
 	lblPoruka=new JLabel("Da li ste sigurni?");
 	lblPoruka.setPreferredSize(dim);
-	dugmeDa=new JButton("Da");
-	dugmeNe=new JButton("Ne");
+	dugmeDa=new JButton("Potvrdi");
+	dugmeNe=new JButton("Odustani");
 	dugmeNe.addActionListener(new ActionListener() 
 	{
 		@Override
