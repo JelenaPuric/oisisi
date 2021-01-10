@@ -38,6 +38,21 @@ public class Student {
 		this.ocjene=new ArrayList<Ocena>();
 		this.nepolozeniPredmeti=new ArrayList<Predmet>();
 	}
+	
+	
+	
+	public ArrayList<Predmet> getNepolozeniPredmeti() {
+		return nepolozeniPredmeti;
+	}
+
+
+
+	public void setNepolozeniPredmeti(ArrayList<Predmet> nepolozeniPredmeti) {
+		this.nepolozeniPredmeti = nepolozeniPredmeti;
+	}
+
+
+
 	public String getPrezime() {
 		return prezime;
 	}
