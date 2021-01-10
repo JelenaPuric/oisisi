@@ -9,6 +9,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
+import Kontroleri.DodavanjePredmetaStudentuKontroler;
 import Kontroleri.DugmePolaganjeKontroler;
 
 
@@ -32,7 +33,7 @@ public class NepolozeniPanel extends JPanel
 		JScrollPane spNepolozeni=new JScrollPane(tblNepolozeni);
 		this.add(spNepolozeni,BorderLayout.CENTER);
 		
-	btnDodaj=new JButton("Dodaj");
+	btnDodaj=new JButton(new DodavanjePredmetaStudentuKontroler());
 	btnObrisi=new JButton("Obriši");
 	btnPolaganje=new JButton(new DugmePolaganjeKontroler());
 	
