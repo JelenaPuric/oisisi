@@ -14,6 +14,25 @@ import View.MyWindow;
 public class ReadWrite {
 
 
-
+	
+	public static void pisiFile(String putanja)
+	{
+	
+		try {
+			FileOutputStream fos = new FileOutputStream(putanja);
+			ObjectOutputStream obj= new ObjectOutputStream(fos);
+			obj.writeObject(MyWindow.getInstance().getModel());
+			fos.close();
+			obj.close();
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 
 }
