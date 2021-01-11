@@ -67,10 +67,6 @@ public class PretragaKontroler extends AbstractAction {
 				}
 				popuniPretrazeneProfesore(pretrazeniProfesori);
 			}
-			else if(deloviLinije.length==3)
-			{
-				
-			}
 			
 			
 			
