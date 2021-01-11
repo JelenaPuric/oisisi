@@ -8,14 +8,6 @@ import View.CentralniPanel;
 
 public class WindowListener extends WindowAdapter{
 	
-	public void windowOpened(WindowEvent e)
-	{
-		ReadWrite.citajFile("C:\\Users\\ljubi\\Documents\\GitHub\\oisisi\\Studentska_sluzba-OISISI\\src\\Data\\data.ss");
-		CentralniPanel.popuniTabeluProfesor();
-		CentralniPanel.popuniTabeluPredmet();
-		CentralniPanel.popuniTabeluStudent();
-		
-	}
 	
 	public void windowClosing(WindowEvent e)
 	{

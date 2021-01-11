@@ -126,61 +126,6 @@ public class CentralniPanel extends JPanel{
 		this.dtmPredmeti = dtmPredmeti;
 	}
 	
-	public static void loadTableStudents() 
-	{
-		for(int i=0; i<MyWindow.getInstance().getModel().getStudenti().size(); i++) 
-		{
-			Student s=MyWindow.getInstance().getModel().getStudenti().get(i);
-			//	Object[] data= {"Indeks","Ime","Prezime","Godina studija","Status","Prosek"};
-
-			Object[] data= {s.getIndex(),s.getIme(),s.getPrezime(),s.getGodina(),s.getStatus(),s.getProsjecnaOcjena()};
-			MyWindow.getInstance().getCentralniPanel().getDtmStudenti().addRow(data);
-			
-		}
-	}
 	
-	public static void popuniTabeluProfesor()
-	{
-		for(int i=0; i<MyWindow.getInstance().getModel().getProfesori().size();i++)
-		{
-		Profesor p= MyWindow.getInstance().getModel().getProfesori().get(i);
-		Object[] dataProf= {p.getIme(), p.getPrezime(), p.getTitula(), p.getZvanja()};
-		MyWindow.getInstance().getCentralniPanel().getDtmProfesori().addRow(dataProf);
-		}
-	}
-	
-	public static void popuniTabeluPredmet()
-	{
-		for(int i=0; i<MyWindow.getInstance().getModel().getPredmeti().size();i++)
-		{
-		Predmet p= MyWindow.getInstance().getModel().getPredmeti().get(i);
-		Object[] dataPred= {p.getSifraPredmeta(), p.getNazivPredmeta(), p.getEspBodovi(),p.getGodinaStudija(), p.getSemestar()};
-		MyWindow.getInstance().getCentralniPanel().getDtmPredmeti().addRow(dataPred);
-		}
-	}
-	
-	public static void popuniTabeluStudent() 
-	{
-		for(int i=0; i<MyWindow.getInstance().getModel().getStudenti().size();i++)
-		{
-			Student s=MyWindow.getInstance().getModel().getStudenti().get(i);
-			Object[] dataStud= {s.getIndex(), s.getIme(), s.getPrezime(), s.getGodina(), s.getStatus(), s.getProsjecnaOcjena()};
-			MyWindow.getInstance().getCentralniPanel().getDtmStudenti().addRow(dataStud);
-		}
-		
-	}
-	
-	public static void loadTablePredmeti() 
-	{
-		for(int i=0; i<MyWindow.getInstance().getModel().getPredmeti().size(); i++) 
-		{
-			Predmet p=MyWindow.getInstance().getModel().getPredmeti().get(i);
-			//Object[] data2= {"Šifra predmeta","Naziv predmeta","Broj ESPB bodova","Godina na kojoj se predmet izvodi","Semestar u kome se predmet izvodi"};
-
-			Object[] data2= {p.getSifraPredmeta(),p.getNazivPredmeta(),p.getEspBodovi(),p.getGodinaStudija(),p.getSemestar()};
-			MyWindow.getInstance().getCentralniPanel().getDtmPredmeti().addRow(data2);
-			
-		}
-	}
 	
 }
