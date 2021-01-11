@@ -1,0 +1,94 @@
+package Kontroleri;
+
+import java.awt.event.ActionEvent;
+import java.util.ArrayList;
+
+import javax.swing.AbstractAction;
+import javax.swing.JOptionPane;
+
+import Model.Predmet;
+import Model.Profesor;
+import View.MyWindow;
+import View.ProzorDodajProfesora;
+
+public class PretragaKontroler extends AbstractAction {
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+		int ind = MyWindow.getInstance().getCentralniPanel().getTabbedPane().getSelectedIndex();
+		String text= MyWindow.getInstance().getToolBar().getPoljePretrazi().getText();
+		ArrayList<Profesor> pretrazeniProfesori= new ArrayList<Profesor>();
+		if(text.equals("")) 
+		{
+			JOptionPane.showMessageDialog(null, "Morate popuniti tekstualno polje za pretragu!!!");
+			return;
+		}
+	
+		String[] deloviLinije= text.split(" ");
+		if(ind==0)
+		{
+			//to do
+		}
+		else if(ind==1)
+		{
+			if(deloviLinije.length==1)
+			{
+				String deoPrezimena=deloviLinije[0];
+				for(int i=0; i<MyWindow.getInstance().getModel().getProfesori().size(); i++) 
+				{
+					Profesor p= MyWindow.getInstance().getModel().getProfesori().get(i);
+					if(p.getPrezime().contains(deoPrezimena)) 
+					{
+						pretrazeniProfesori.add(p);
+						
+					}
+					
+				}
+				
+				
+				popuniPretrazeneProfesore(pretrazeniProfesori);				
+				
+				
+			}
+			else if(deloviLinije.length==2) 
+			{
+				
+				
+			}
+			else if(deloviLinije.length==3)
+			{
+				
+			}
+			
+			
+			
+		}
+		else
+		{
+			
+		}
+		
+	}
+	
+	public PretragaKontroler()
+	{
+		super("Pretraga");
+	}
+	
+	public void popuniPretrazeneProfesore(ArrayList<Profesor> profesori) 
+	{
+		
+		 for(int i=0; i<MyWindow.getInstance().getModel().getProfesori().size(); i++) 
+		   {
+			   Profesor p= MyWindow.getInstance().getModel().getProfesori().get(i);
+			   Object[] data2= {p.getPrezime(), p.getIme(), p.getTitula(), p.getZvanja()};
+			   MyWindow.getInstance().getCentralniPanel().getDtmProfesori().addRow(data2);
+			   
+		   }
+			
+	}
+
+	//TODO POPUNITI DTM 
+}

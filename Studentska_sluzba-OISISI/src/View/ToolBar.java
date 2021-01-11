@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import Kontroleri.IzmenaEntitetKontroler;
-
+import Kontroleri.PretragaKontroler;
 import Kontroleri.ProzorDodajEntitetKontroler;
 import Kontroleri.ProzorObrisiKontroler;
 
@@ -30,7 +30,7 @@ public class ToolBar extends JPanel{
 	    dugmeDodaj= new JButton(new ProzorDodajEntitetKontroler());
 		dugmeIzmeni= new JButton(new IzmenaEntitetKontroler());
 		dugmeIzbrisi= new JButton(new ProzorObrisiKontroler());
-		dugmePretrazi= new JButton("Pretrazi");
+		dugmePretrazi= new JButton(new PretragaKontroler());
 		poljePretrazi= new JTextField();
 		
 		poljePretrazi.setPreferredSize(new Dimension(200,30));
@@ -52,5 +52,47 @@ public class ToolBar extends JPanel{
 		add(levi,BorderLayout.WEST);
 		add(desni,BorderLayout.EAST);
 	}
+
+	public JButton getDugmeDodaj() {
+		return dugmeDodaj;
+	}
+
+	public void setDugmeDodaj(JButton dugmeDodaj) {
+		this.dugmeDodaj = dugmeDodaj;
+	}
+
+	public JButton getDugmeIzmeni() {
+		return dugmeIzmeni;
+	}
+
+	public void setDugmeIzmeni(JButton dugmeIzmeni) {
+		this.dugmeIzmeni = dugmeIzmeni;
+	}
+
+	public JButton getDugmeIzbrisi() {
+		return dugmeIzbrisi;
+	}
+
+	public void setDugmeIzbrisi(JButton dugmeIzbrisi) {
+		this.dugmeIzbrisi = dugmeIzbrisi;
+	}
+
+	public JButton getDugmePretrazi() {
+		return dugmePretrazi;
+	}
+
+	public void setDugmePretrazi(JButton dugmePretrazi) {
+		this.dugmePretrazi = dugmePretrazi;
+	}
+
+	public JTextField getPoljePretrazi() {
+		return poljePretrazi;
+	}
+
+	public void setPoljePretrazi(JTextField poljePretrazi) {
+		this.poljePretrazi = poljePretrazi;
+	}
+	
+	
 
 }
