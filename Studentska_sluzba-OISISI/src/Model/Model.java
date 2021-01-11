@@ -1,10 +1,15 @@
 package Model;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-public class Model {
+public class Model implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7535166678034277659L;
 	private ArrayList<Ocena> ocene;
 	private ArrayList<Student> studenti;
 	private ArrayList<Profesor> profesori;
