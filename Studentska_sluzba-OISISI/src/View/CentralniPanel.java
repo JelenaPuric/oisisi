@@ -149,6 +149,27 @@ public class CentralniPanel extends JPanel{
 		}
 	}
 	
+	public static void popuniTabeluPredmet()
+	{
+		for(int i=0; i<MyWindow.getInstance().getModel().getPredmeti().size();i++)
+		{
+		Predmet p= MyWindow.getInstance().getModel().getPredmeti().get(i);
+		Object[] dataPred= {p.getSifraPredmeta(), p.getNazivPredmeta(), p.getEspBodovi(),p.getGodinaStudija(), p.getSemestar()};
+		MyWindow.getInstance().getCentralniPanel().getDtmPredmeti().addRow(dataPred);
+		}
+	}
+	
+	public static void popuniTabeluStudent() 
+	{
+		for(int i=0; i<MyWindow.getInstance().getModel().getStudenti().size();i++)
+		{
+			Student s=MyWindow.getInstance().getModel().getStudenti().get(i);
+			Object[] dataStud= {s.getIndex(), s.getIme(), s.getPrezime(), s.getGodina(), s.getStatus(), s.getProsjecnaOcjena()};
+			MyWindow.getInstance().getCentralniPanel().getDtmStudenti().addRow(dataStud);
+		}
+		
+	}
+	
 	public static void loadTablePredmeti() 
 	{
 		for(int i=0; i<MyWindow.getInstance().getModel().getPredmeti().size(); i++) 
