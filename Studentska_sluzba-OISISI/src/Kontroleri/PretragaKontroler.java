@@ -39,7 +39,7 @@ public class PretragaKontroler extends AbstractAction {
 				for(int i=0; i<MyWindow.getInstance().getModel().getProfesori().size(); i++) 
 				{
 					Profesor p= MyWindow.getInstance().getModel().getProfesori().get(i);
-					if(p.getPrezime().contains(deoPrezimena)) 
+					if(p.getPrezime().toLowerCase().contains(deoPrezimena.toLowerCase())) 
 					{
 						pretrazeniProfesori.add(p);
 						
@@ -71,10 +71,7 @@ public class PretragaKontroler extends AbstractAction {
 			
 			
 		}
-		else
-		{
-			
-		}
+		
 		
 	}
 	
