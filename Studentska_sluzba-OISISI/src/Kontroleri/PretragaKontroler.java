@@ -20,6 +20,7 @@ public class PretragaKontroler extends AbstractAction {
 		int ind = MyWindow.getInstance().getCentralniPanel().getTabbedPane().getSelectedIndex();
 		String text= MyWindow.getInstance().getToolBar().getPoljePretrazi().getText();
 		ArrayList<Profesor> pretrazeniProfesori= new ArrayList<Profesor>();
+		ArrayList<Predmet> pretrazeniPredmeti= new ArrayList<Predmet>();
 		if(text.equals("")) 
 		{
 			JOptionPane.showMessageDialog(null, "Morate popuniti tekstualno polje za pretragu!!!");
@@ -52,26 +53,41 @@ public class PretragaKontroler extends AbstractAction {
 				
 				
 			}
-			else if(deloviLinije.length==2) 
-			{
-				String deoPrezimena=deloviLinije[0];
-				String deoImena=deloviLinije[1];
-				for(int i=0; i<MyWindow.getInstance().getModel().getProfesori().size(); i++)
+				else if(deloviLinije.length==2) 
 				{
-					Profesor p= MyWindow.getInstance().getModel().getProfesori().get(i);
-					if(p.getPrezime().contains(deoPrezimena) && p.getIme().contains(deoImena))
+					String deoPrezimena=deloviLinije[0];
+					String deoImena=deloviLinije[1];
+					for(int i=0; i<MyWindow.getInstance().getModel().getProfesori().size(); i++)
 					{
-						pretrazeniProfesori.add(p);
+						Profesor p= MyWindow.getInstance().getModel().getProfesori().get(i);
+						if(p.getPrezime().contains(deoPrezimena) && p.getIme().contains(deoImena))
+						{
+							pretrazeniProfesori.add(p);
+						}
+						
 					}
-					
+					popuniPretrazeneProfesore(pretrazeniProfesori);
 				}
-				popuniPretrazeneProfesore(pretrazeniProfesori);
-			}
-			
+				
 			
 			
 		}
-		
+		else
+		{
+			for(int i=0; i<MyWindow.getInstance().getModel().getPredmeti().size(); i++) 
+			{
+				Predmet p= MyWindow.getInstance().getModel().getPredmeti().get(i);
+				if(p.getNazivPredmeta().contains(text)) 
+				{
+					pretrazeniPredmeti.add(p);
+					
+				}
+				
+			}
+			
+			
+			popuniPretrazenePredmete(pretrazeniPredmeti);	
+		}
 		
 	}
 	
@@ -92,6 +108,18 @@ public class PretragaKontroler extends AbstractAction {
 			   
 		   }
 			
+	}
+	
+	public void popuniPretrazenePredmete(ArrayList<Predmet> predmeti)
+	{
+		MyWindow.getInstance().getCentralniPanel().getDtmPredmeti().setRowCount(0);
+		
+		for(int i=0; i<predmeti.size(); i++)
+		{
+			Predmet p=predmeti.get(i);
+			Object[] data3= {p.getSifraPredmeta(), p.getNazivPredmeta(), p.getEspBodovi(), p.getGodinaStudija(), p.getSemestar()};
+			MyWindow.getInstance().getCentralniPanel().getDtmPredmeti().addRow(data3);
+		}
 	}
 
 	//TODO POPUNITI DTM 
