@@ -3,7 +3,10 @@ package View;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Image;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -26,8 +29,19 @@ public class ToolBar extends JPanel{
 	public ToolBar()
 	{
 		this.setLayout(new BorderLayout());
-		
+		/*
 	    dugmeDodaj= new JButton(new ProzorDodajEntitetKontroler());
+	    dugmeDodaj.setPreferredSize(new Dimension(100,30));
+	   System.out.println(dugmeDodaj.getHeight());
+			ImageIcon icon = new ImageIcon("C:\\Users\\ljubi\\Documents\\GitHub\\oisisi\\Studentska_sluzba-OISISI\\resources\\dodaj.png");
+			Image i=icon.getImage();
+			Image ii=i.getScaledInstance(dugmeDodaj.getWidth(), dugmeDodaj.getHeight(),Image.SCALE_SMOOTH);
+			ImageIcon ic=new ImageIcon(ii);
+			dugmeDodaj.setIcon(ic);
+		 */
+		
+
+	   // dugmeDodaj.setIcon(new ImageIcon(Class.class.getResource("dodaj.png")));
 		dugmeIzmeni= new JButton(new IzmenaEntitetKontroler());
 		dugmeIzbrisi= new JButton(new ProzorObrisiKontroler());
 		dugmePretrazi= new JButton(new PretragaKontroler());
