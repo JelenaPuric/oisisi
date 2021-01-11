@@ -54,8 +54,18 @@ public class PretragaKontroler extends AbstractAction {
 			}
 			else if(deloviLinije.length==2) 
 			{
-				
-				
+				String deoPrezimena=deloviLinije[0];
+				String deoImena=deloviLinije[1];
+				for(int i=0; i<MyWindow.getInstance().getModel().getProfesori().size(); i++)
+				{
+					Profesor p= MyWindow.getInstance().getModel().getProfesori().get(i);
+					if(p.getPrezime().contains(deoPrezimena) && p.getIme().contains(deoImena))
+					{
+						pretrazeniProfesori.add(p);
+					}
+					
+				}
+				popuniPretrazeneProfesore(pretrazeniProfesori);
 			}
 			else if(deloviLinije.length==3)
 			{
@@ -79,10 +89,11 @@ public class PretragaKontroler extends AbstractAction {
 	
 	public void popuniPretrazeneProfesore(ArrayList<Profesor> profesori) 
 	{
+		MyWindow.getInstance().getCentralniPanel().getDtmProfesori().setRowCount(0);
 		
-		 for(int i=0; i<MyWindow.getInstance().getModel().getProfesori().size(); i++) 
+		 for(int i=0; i<profesori.size(); i++) 
 		   {
-			   Profesor p= MyWindow.getInstance().getModel().getProfesori().get(i);
+			   Profesor p=profesori.get(i);
 			   Object[] data2= {p.getPrezime(), p.getIme(), p.getTitula(), p.getZvanja()};
 			   MyWindow.getInstance().getCentralniPanel().getDtmProfesori().addRow(data2);
 			   

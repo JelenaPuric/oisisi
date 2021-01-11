@@ -35,7 +35,7 @@ public class DugmePotvrdiProfesoraKontroler extends AbstractAction {
 		LocalDateTime dat=LocalDateTime.of(datum, LocalDateTime.now().toLocalTime());
 		
 		Titula titulaP;
-		int index= ProzorIzmenaProfesora.getInstance().getCmbTitula().getSelectedIndex();
+		int index= ProzorDodajProfesora.getInstance().getCmbTitula().getSelectedIndex();
 		if(index==0)
 		{
 			titulaP=Titula.BSc;
@@ -58,28 +58,28 @@ public class DugmePotvrdiProfesoraKontroler extends AbstractAction {
 		}
 		
 		Zvanje zvanjeP;
-		int ind= ProzorIzmenaProfesora.getInstance().getCmbZvanje().getSelectedIndex();
-		if(index==0)
+		int ind= ProzorDodajProfesora.getInstance().getCmbZvanje().getSelectedIndex();
+		if(ind==0)
 		{
 			zvanjeP=Zvanje.saradnik_u_nastavi;
 		}
-		else if (index==1) {
+		else if (ind==1) {
 		
 			zvanjeP=Zvanje.asistent;
 		}
-		else if (index==2)
+		else if (ind==2)
 		{
 			zvanjeP=Zvanje.asistent_sa_doktoratom;
 		}
-		else if(index==3)
+		else if(ind==3)
 		{
 			zvanjeP=Zvanje.docent;
 		}
-		else if(index==4)
+		else if(ind==4)
 		{
 			zvanjeP=Zvanje.vanredni_profesor;
 		}
-		else if(index==5)
+		else if(ind==5)
 		{
 			zvanjeP=Zvanje.redovni_profesor;
 		}
@@ -88,7 +88,7 @@ public class DugmePotvrdiProfesoraKontroler extends AbstractAction {
 			zvanjeP=Zvanje.profesor_emertius;
 		}
 		
-		
+		System.out.println(zvanjeP);
 		
 		Profesor p=new Profesor(prezime,ime,adresaStanovanja,dat ,brojTelefona,mail,adresaKancelarije,brojLicneKarte, titulaP,  zvanjeP);
 		MyWindow.getInstance().getModel().dodajProfesora(p);
@@ -99,6 +99,7 @@ public class DugmePotvrdiProfesoraKontroler extends AbstractAction {
 		MyWindow.getInstance().getCentralniPanel().getDtmProfesori().addRow(rdata);
 		
 		ProzorDodajProfesora.getInstance().dispose();
+		ProzorDodajProfesora.toNull();
 		
 	}
 	public DugmePotvrdiProfesoraKontroler()

@@ -44,6 +44,12 @@ public class ProzorDodajProfesora extends JFrame{
 	private JButton btnOdustani;
 	private static ProzorDodajProfesora instance;
 	
+	public static void toNull() 
+	{
+		instance=null;
+		
+	}
+	
 	public static ProzorDodajProfesora getInstance() 
 	{
 		if(instance==null) 
