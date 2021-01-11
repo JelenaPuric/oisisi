@@ -81,7 +81,7 @@ public class DugmePotvrdiIzmenaKontroler extends AbstractAction
 	s.setGodina(godina);
 	s.setStatus(status);
 	MyWindow.getInstance().getCentralniPanel().getDtmStudenti().setRowCount(0);
-	MyWindow.getInstance().getCentralniPanel().loadTableStudents();
+	MyWindow.getInstance().getCentralniPanel().loadTableStudenti();
 	ProzorIzmenaStudenta.getInstance().dispose();
 	}
 	
