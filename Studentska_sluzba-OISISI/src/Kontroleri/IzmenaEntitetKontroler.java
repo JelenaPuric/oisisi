@@ -38,6 +38,7 @@ public class IzmenaEntitetKontroler extends AbstractAction
 				Student s=MyWindow.getInstance().getModel().getStudenti().get(ind);
 				ProzorIzmenaStudenta.getInstance().getTxtIme().setText(s.getIme());
 				ProzorIzmenaStudenta.getInstance().getTxtPrezime().setText(s.getPrezime());
+				
 				ProzorIzmenaStudenta.getInstance().getTxtDatumRodjenja().setText(s.getDatumRodjenja().toString());
 				ProzorIzmenaStudenta.getInstance().getTxtAdresaStanovanja().setText(s.getAdresaStanovanja());
 				ProzorIzmenaStudenta.getInstance().getTxtBrojTelefona().setText(s.getTelefon());
@@ -82,8 +83,11 @@ public class IzmenaEntitetKontroler extends AbstractAction
 					Profesor p= MyWindow.getInstance().getModel().getProfesori().get(ind1);
 					ProzorIzmenaProfesora.getInstance().getTxtIme().setText(p.getIme());
 					ProzorIzmenaProfesora.getInstance().getTxtPrezime().setText(p.getPrezime());
-					//TODO datum format yyyy-mm-dd
-				//	ProzorIzmenaProfesora.getInstance().getTxtDatumRodjenja().setText(p.getDatum().toString());
+					String date;
+					date=String.valueOf(p.getDatum().getYear())+"-"+String.valueOf(p.getDatum().getMonthValue())+"-"+String.valueOf(p.getDatum().getDayOfMonth());
+					
+					
+					ProzorIzmenaProfesora.getInstance().getTxtDatumRodjenja().setText(date);
 					ProzorIzmenaProfesora.getInstance().getTxtAdresaStanovanja().setText(p.getAdresaStanovanja());
 					ProzorIzmenaProfesora.getInstance().getTxtKontaktTelefon().setText(p.getKontaktTel());
 					ProzorIzmenaProfesora.getInstance().getTxtEmail().setText(p.getEmail());

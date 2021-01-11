@@ -32,7 +32,7 @@ public class DugmePotvrdiIzmenuProfesora extends AbstractAction{
 		
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		LocalDate datum=LocalDate.parse(datumRodjenja,formatter);
-		LocalDateTime dat=LocalDateTime.of(datum, LocalDateTime.now().toLocalTime());
+		LocalDateTime dat=datum.atStartOfDay();
 		
 		Titula titulaP;
 		int index= ProzorIzmenaProfesora.getInstance().getCmbTitula().getSelectedIndex();
