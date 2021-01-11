@@ -29,9 +29,9 @@ public class ToolBar extends JPanel{
 	public ToolBar()
 	{
 		this.setLayout(new BorderLayout());
-		/*
+		
 	    dugmeDodaj= new JButton(new ProzorDodajEntitetKontroler());
-	    dugmeDodaj.setPreferredSize(new Dimension(100,30));
+	    /*dugmeDodaj.setPreferredSize(new Dimension(100,30));
 	   System.out.println(dugmeDodaj.getHeight());
 			ImageIcon icon = new ImageIcon("C:\\Users\\ljubi\\Documents\\GitHub\\oisisi\\Studentska_sluzba-OISISI\\resources\\dodaj.png");
 			Image i=icon.getImage();
