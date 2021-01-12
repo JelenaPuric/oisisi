@@ -62,12 +62,12 @@ public class DugmePotvrdiPredmetKontroler extends AbstractAction {
 		
 		
 		Predmet pr=new Predmet(sifraPredmeta,nazivPredmeta,semestar,godina,predmetniProfesor,ESPB);
-		MyWindow.getInstance().getModel().dodajPredmet(pr);
-		
-		
-		
+		if(MyWindow.getInstance().getModel().dodajPredmet(pr)==true)
+		{
+			
 		Object[] rdata= { pr.getSifraPredmeta(), pr.getNazivPredmeta(), pr.getEspBodovi(),pr.getGodinaStudija(),pr.getSemestar()};
 		MyWindow.getInstance().getCentralniPanel().getDtmPredmeti().addRow(rdata);
+		}
 		
 		ProzorDodajPredmet.getInstance().dispose();
 		

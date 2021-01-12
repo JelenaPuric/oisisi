@@ -39,6 +39,8 @@ public static PonistavanjeOcene getInstance()
 public PonistavanjeOcene()
 {
 	setTitle("Ponistavanje Ocene");
+	setPreferredSize(new Dimension(350,270));
+	pack();
 	setLayout(new BorderLayout());
 	 JPanel mainPanel=new JPanel();
 	 mainPanel.setLayout(new BoxLayout(mainPanel,BoxLayout.Y_AXIS));
