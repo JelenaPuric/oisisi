@@ -11,7 +11,7 @@ public class WindowListener extends WindowAdapter{
 	public void windowOpened(WindowEvent e) 
 	{
 		
-		ReadWrite.citajFile("C:\\Users\\ljubi\\Documents\\GitHub\\oisisi\\Studentska_sluzba-OISISI\\src\\Data\\data.ss");
+		ReadWrite.citajFile("C:\\Users\\korisnik\\Documents\\GitHub\\oisisi\\Studentska_sluzba-OISISI\\src\\Data\\data.ss");
 		
 		
 	}
