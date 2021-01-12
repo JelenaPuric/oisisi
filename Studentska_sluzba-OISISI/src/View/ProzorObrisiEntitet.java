@@ -46,7 +46,6 @@ private static ProzorObrisiEntitet instance;
 		setPreferredSize(new Dimension(350,270));
 		pack();
 		mainPanel.setLayout(new BoxLayout(mainPanel,BoxLayout.Y_AXIS));
-		
 		add(mainPanel,BorderLayout.CENTER);
 		
 		
