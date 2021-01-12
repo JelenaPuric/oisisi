@@ -41,8 +41,10 @@ public UklanjanjePredmetaSaProfesora()
 	setTitle("Ukloni predmet");
 	setLayout(new BorderLayout());
 	 JPanel mainPanel=new JPanel();
+	 setPreferredSize(new Dimension(300,200));
+    	pack();
 	 mainPanel.setLayout(new BoxLayout(mainPanel,BoxLayout.Y_AXIS));
-	 Dimension dim= new Dimension(300,200);
+	 Dimension dim= new Dimension(100,100);
 	lblPoruka=new JLabel("Da li ste sigurni?");
 	lblPoruka.setPreferredSize(dim);
 	dugmeDa=new JButton(new PotvrdiUklanjanjePredmetaSaProfesoraKontroler());
