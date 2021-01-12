@@ -1,6 +1,7 @@
 package View;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -38,6 +39,8 @@ public class DodavanjePredmetaStudentu extends JFrame
    public DodavanjePredmetaStudentu()
    {
 	   setTitle("Dodavanje predmeta");
+	   setPreferredSize(new Dimension(450,400));
+		pack();
 	   setLayout(new BorderLayout());
 	   JPanel mainPanel=new JPanel();
 	   mainPanel.setLayout(new BorderLayout());
