@@ -56,6 +56,55 @@ public PolozeniPanel()
 }
 
 
+
+public JButton getBtnPonistiOcenu() {
+	return btnPonistiOcenu;
+}
+
+
+
+public void setBtnPonistiOcenu(JButton btnPonistiOcenu) {
+	this.btnPonistiOcenu = btnPonistiOcenu;
+}
+
+
+
+public JTable getTblPolozeni() {
+	return tblPolozeni;
+}
+
+
+
+public void setTblPolozeni(JTable tblPolozeni) {
+	this.tblPolozeni = tblPolozeni;
+}
+
+
+
+public JLabel getProsecnaOcena() {
+	return prosecnaOcena;
+}
+
+
+
+public void setProsecnaOcena(JLabel prosecnaOcena) {
+	this.prosecnaOcena = prosecnaOcena;
+}
+
+
+
+public JLabel getUkupnoEspb() {
+	return ukupnoEspb;
+}
+
+
+
+public void setUkupnoEspb(JLabel ukupnoEspb) {
+	this.ukupnoEspb = ukupnoEspb;
+}
+
+
+
 public DefaultTableModel getDtmPolozeni() {
 	return dtmPolozeni;
 }
