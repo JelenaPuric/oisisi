@@ -12,7 +12,9 @@ public class WindowListener extends WindowAdapter{
 	{
 		
 		ReadWrite.citajFile("C:\\Users\\korisnik\\Documents\\GitHub\\oisisi\\Studentska_sluzba-OISISI\\src\\Data\\data.ss");
-		
+		CentralniPanel.loadTableStudenti();
+		CentralniPanel.loadTableProfesor();
+		CentralniPanel.loadTablePredmeti();
 		
 	}
 	
