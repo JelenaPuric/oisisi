@@ -28,6 +28,7 @@ public class MyWindow extends JFrame  {
 	
 	public MyWindow()
 	{
+		setTitle("Studentska sluzba");
 		 this.setLayout(new BorderLayout());
 		  centralniPanel=new CentralniPanel();
 		  setPreferredSize(new Dimension(500,500));
