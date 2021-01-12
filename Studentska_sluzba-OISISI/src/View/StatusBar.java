@@ -29,7 +29,10 @@ public class StatusBar extends JPanel
 		{
 			// TODO Auto-generated method stub
 			LocalDateTime date=LocalDateTime.now();
-			datum.setText(date.toString());
+			String d;
+			d=String.valueOf(date.getHour())+":"+String.valueOf(date.getMinute())+" "+String.valueOf(date.getDayOfMonth())+"."+String.valueOf(date.getMonthValue())+"."+String.valueOf(date.getYear())+".";
+			
+			datum.setText(d);
 			
 		}
 		
