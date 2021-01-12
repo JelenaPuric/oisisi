@@ -12,7 +12,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-
+import Kontroleri.DugmeOdustaniUklanjanjeProf;
+import Kontroleri.DugmePotvrdiUklanjanjeProfSaPredmeta;
 import Kontroleri.PotvrdiBrisanjeKontroler;
 
 public class ProzorUklanjanjeProfSaPredmeta extends JFrame{
@@ -52,8 +53,9 @@ private static ProzorUklanjanjeProfSaPredmeta instance;
 		
 		setTitle("Uklanjanje profesora sa predmeta");
 		lblporuka= new JLabel("Da li ste sigurni da zelite da ukonite profesora " );
-		dugmeDa= new JButton("Da");
-		dugmeNe= new JButton("Ne");
+		dugmeDa= new JButton(new DugmePotvrdiUklanjanjeProfSaPredmeta());
+		dugmeNe= new JButton(new DugmeOdustaniUklanjanjeProf());
+		
 		
 		dugmeNe.addActionListener(new ActionListener() { 
 			  public void actionPerformed(ActionEvent e) { 
