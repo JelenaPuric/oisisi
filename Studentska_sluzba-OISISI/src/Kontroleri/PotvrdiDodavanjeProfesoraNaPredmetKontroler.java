@@ -20,18 +20,16 @@ public class PotvrdiDodavanjeProfesoraNaPredmetKontroler extends AbstractAction
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
-		int[] indexi= DodavanjeProfesoraNaPredmet.getInstance().getTblProfesori().getSelectedRows();
+		
+			
+		int index= DodavanjeProfesoraNaPredmet.getInstance().getTblProfesori().getSelectedRow();
 		int row=MyWindow.getInstance().getCentralniPanel().getTblPredmeti().getSelectedRow();
 		Predmet pred=MyWindow.getInstance().getModel().getPredmeti().get(row);
-		for(int i=0; i<indexi.length; i++) 
-		{
-			System.out.println("usao "+indexi[i]);
-			String linija=(String) DodavanjeProfesoraNaPredmet.getInstance().getDtmProfesori().getValueAt(indexi[i], 0);
-			String[] deloviLinije=linija.split("\\-");
-			Profesor pr= MyWindow.getInstance().getModel().nadjiProfesora(deloviLinije[0]);
-			//pred.getProfesor().add(pr);
-			
-		}
+		
+		Profesor p=MyWindow.getInstance().getModel().getProfesori().get(index);
+		pred.setProfesor(p.getBrojLicneKarte());
+		
+		
 		DodavanjeProfesoraNaPredmet.getInstance().dispose();
 		
 	}
