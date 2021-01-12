@@ -39,7 +39,7 @@ public static PonistavanjeOcene getInstance()
 public PonistavanjeOcene()
 {
 	setTitle("Ponistavanje Ocene");
-	setPreferredSize(new Dimension(300,300));
+	setPreferredSize(new Dimension(350,270));
 	pack();
 	setLayout(new BorderLayout());
 	 JPanel mainPanel=new JPanel();
