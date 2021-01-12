@@ -70,6 +70,8 @@ public class ProzorIzmenaStudenta extends JFrame
 	  public ProzorIzmenaStudenta()
 	  {
 		  setTitle("Izmena studenta");
+		  setPreferredSize(new Dimension(600,500));
+		  pack();
 		  setLayout(new BorderLayout());
 		  JPanel mainPanel=new JPanel();
 		  mainPanel.setLayout(new BoxLayout(mainPanel,BoxLayout.Y_AXIS));	  
