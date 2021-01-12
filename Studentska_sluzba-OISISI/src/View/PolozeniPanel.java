@@ -11,6 +11,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
+import Kontroleri.PonistavanjeOceneKontroler;
+
 public class PolozeniPanel extends JPanel
 {
 	private JButton btnPonistiOcenu;
@@ -31,7 +33,7 @@ public PolozeniPanel()
 	tblPolozeni=new JTable(dtmPolozeni);
 	JScrollPane spPolozeni=new JScrollPane(tblPolozeni);
 	this.add(spPolozeni,BorderLayout.CENTER);
-	btnPonistiOcenu=new JButton("Poništi ocenu");
+	btnPonistiOcenu=new JButton(new PonistavanjeOceneKontroler());
   
 	
 	prosecnaOcena=new JLabel("Prosečna ocena:");
