@@ -18,6 +18,6 @@ public class Configuartion
 	public static Icon addIcon=  new ImageIcon(currentRelativePath.toAbsolutePath().toString()+"/resources/add.png");
 	public static Icon editIcon=  new ImageIcon(currentRelativePath.toAbsolutePath().toString()+"/resources/edit.png");
 	public static Icon deleteIcon=  new ImageIcon(currentRelativePath.toAbsolutePath().toString()+"/resources/bin.png");
-	
+	public static Icon pretragaIcon= new ImageIcon(currentRelativePath.toAbsolutePath().toString()+"/resource/pretraga.png");
 	
 }

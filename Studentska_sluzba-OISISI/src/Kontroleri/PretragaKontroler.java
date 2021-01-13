@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import javax.swing.AbstractAction;
 import javax.swing.JOptionPane;
 
+import File.Configuartion;
 import Model.Predmet;
 import Model.Profesor;
 import Model.Student;
@@ -20,16 +21,18 @@ public class PretragaKontroler extends AbstractAction {
 		
 		int ind = MyWindow.getInstance().getCentralniPanel().getTabbedPane().getSelectedIndex();
 		String text= MyWindow.getInstance().getToolBar().getPoljePretrazi().getText();
+		String[] deloviLinije= text.split("// ");
+		
 		ArrayList<Profesor> pretrazeniProfesori= new ArrayList<Profesor>();
 		ArrayList<Predmet> pretrazeniPredmeti= new ArrayList<Predmet>();
 		ArrayList<Student> pretrazeniStudenti= new ArrayList<Student>();
-		if(text.equals("")) 
+		if(text.equals(" ")) 
 		{
 			JOptionPane.showMessageDialog(null, "Morate popuniti tekstualno polje za pretragu!!!");
 			return;
 		}
 	
-		String[] deloviLinije= text.split(" ");
+		
 		if(ind==0)
 		{
 			if(deloviLinije.length==1)
