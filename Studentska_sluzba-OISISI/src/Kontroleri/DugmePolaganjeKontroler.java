@@ -19,7 +19,7 @@ public class DugmePolaganjeKontroler extends AbstractAction{
 		Predmet p=MyWindow.getInstance().getModel().getPredmeti().get(indexp);
 		ProzorUnosOcene.getInstance().getTxtSifra().setText(p.getSifraPredmeta());
 		ProzorUnosOcene.getInstance().getTxtSifra().setEditable(false);
-		ProzorUnosOcene.getInstance().getTxtSifra().setText(p.getNazivPredmeta());
+		ProzorUnosOcene.getInstance().getTxtNaziv().setText(p.getNazivPredmeta());
 		ProzorUnosOcene.getInstance().getTxtNaziv().setEditable(false);
 		if(indexp>=0)
 		{

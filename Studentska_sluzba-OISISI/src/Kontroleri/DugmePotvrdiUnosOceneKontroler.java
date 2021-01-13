@@ -74,6 +74,12 @@ public class DugmePotvrdiUnosOceneKontroler extends AbstractAction {
 		Object[] rowData= {p.getSifraPredmeta(), p.getNazivPredmeta(), p.getEspBodovi(), o.getVrijednostOcjene(), o.getDatumPolaganjaPredmeta()};
 		ProzorIzmenaStudenta.getInstance().getPolozeniPanel().getDtmPolozeni().addRow(rowData);
 		PolozeniPanel.Izracunaj();
+		ProzorUnosOcene.getInstance().dispose();
+	}
+	
+	public DugmePotvrdiUnosOceneKontroler()
+	{
+		super("Potvrdi");
 	}
 
 }
