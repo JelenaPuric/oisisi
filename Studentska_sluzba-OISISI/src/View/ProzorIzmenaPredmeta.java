@@ -65,6 +65,7 @@ public class ProzorIzmenaPredmeta extends JFrame
 	   setTitle("Izmena predmeta");
 	   setPreferredSize(new Dimension(600,500));
 	   pack();
+	   setLocationRelativeTo(null);
 	   setLayout(new BorderLayout());
 	   JPanel mainPanel=new JPanel();
 	   mainPanel.setLayout(new BoxLayout(mainPanel,BoxLayout.Y_AXIS));
