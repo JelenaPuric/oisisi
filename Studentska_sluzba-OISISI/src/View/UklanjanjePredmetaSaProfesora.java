@@ -43,6 +43,7 @@ public UklanjanjePredmetaSaProfesora()
 	 JPanel mainPanel=new JPanel();
 	 setPreferredSize(new Dimension(300,200));
     	pack();
+    	setLocationRelativeTo(null);
 	 mainPanel.setLayout(new BoxLayout(mainPanel,BoxLayout.Y_AXIS));
 	 Dimension dim= new Dimension(100,100);
 	lblPoruka=new JLabel("Da li ste sigurni?");
