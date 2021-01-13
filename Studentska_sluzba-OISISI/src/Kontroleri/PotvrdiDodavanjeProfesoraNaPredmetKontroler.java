@@ -8,6 +8,7 @@ import Model.Predmet;
 import Model.Profesor;
 import View.DodavanjeProfesoraNaPredmet;
 import View.MyWindow;
+import View.ProzorIzmenaPredmeta;
 
 public class PotvrdiDodavanjeProfesoraNaPredmetKontroler extends AbstractAction
 {
@@ -25,11 +26,8 @@ public class PotvrdiDodavanjeProfesoraNaPredmetKontroler extends AbstractAction
 		int index= DodavanjeProfesoraNaPredmet.getInstance().getTblProfesori().getSelectedRow();
 		int row=MyWindow.getInstance().getCentralniPanel().getTblPredmeti().getSelectedRow();
 		Predmet pred=MyWindow.getInstance().getModel().getPredmeti().get(row);
-		
 		Profesor p=MyWindow.getInstance().getModel().getProfesori().get(index);
-		pred.setProfesor(p.getBrojLicneKarte());
-		
-		
+		ProzorIzmenaPredmeta.getInstance().getTxtPredmetniProfesor().setText(p.getBrojLicneKarte());
 		DodavanjeProfesoraNaPredmet.getInstance().dispose();
 		
 	}
