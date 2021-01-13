@@ -44,6 +44,7 @@ public class DodavanjeProfesoraNaPredmet extends JFrame{
 		  JPanel mainPanel=new JPanel();
 		  setPreferredSize(new Dimension(450,400));
 		  pack();
+		  setLocationRelativeTo(null);
 		  this.setLayout(new BorderLayout());
 		  
 		  String s="";
