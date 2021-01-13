@@ -8,6 +8,7 @@ import Model.Predmet;
 import Model.Student;
 import View.DodavanjePredmetaStudentu;
 import View.MyWindow;
+import View.ProzorIzmenaStudenta;
 
 public class PotvrdiDodavanjePredmetaStudentuKontroler extends AbstractAction
 {
@@ -31,6 +32,9 @@ public class PotvrdiDodavanjePredmetaStudentuKontroler extends AbstractAction
 			Predmet p= MyWindow.getInstance().getModel().nadjiPredmet(deloviLinije[0]);
 			stud.getNepolozeniPredmeti().add(p);
 			
+			
+			Object[] data= {p.getSifraPredmeta(),p.getNazivPredmeta(),p.getEspBodovi(),p.getGodinaStudija(),p.getSemestar()};
+			ProzorIzmenaStudenta.getInstance().getDtmNepolozeni().addRow(data);
 		}
 		DodavanjePredmetaStudentu.getInstance().dispose();
 		

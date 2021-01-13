@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -18,6 +19,8 @@ import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 import Kontroleri.DugmePotvrdiIzmenaKontroler;
+import Model.Predmet;
+import Model.Student;
 
 
 public class ProzorIzmenaStudenta extends JFrame
@@ -450,6 +453,17 @@ public class ProzorIzmenaStudenta extends JFrame
 	public void setNepolozeniPanel(NepolozeniPanel nepolozeniPanel) {
 		this.nepolozeniPanel = nepolozeniPanel;
 	}
-	  
+	
+	public static void popuniNepolozene()
+	{
+		int ind = MyWindow.getInstance().getCentralniPanel().getTblStudenti().getSelectedRow();
+		Student s= MyWindow.getInstance().getModel().getStudenti().get(ind);
+		ArrayList<Predmet> predmeti =s.getNepolozeniPredmeti();
+		for(Predmet p : predmeti)
+		{
+			Object[] data = {	p.getSifraPredmeta(),p.getNazivPredmeta(),p.getEspBodovi(),p.getGodinaStudija(),p.getSemestar()};
+			ProzorIzmenaStudenta.getInstance().getDtmNepolozeni().addRow(data);
+		}
+	}
 	 
 }
