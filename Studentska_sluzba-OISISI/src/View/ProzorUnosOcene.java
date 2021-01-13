@@ -55,7 +55,7 @@ public class ProzorUnosOcene extends JFrame {
 		JPanel mainPanel= new JPanel();
 		setPreferredSize(new Dimension(500,300));
 		pack();
-		
+		setLocationRelativeTo(null);
 		mainPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
 		
 		lblsifra= new JLabel("Sifra");
