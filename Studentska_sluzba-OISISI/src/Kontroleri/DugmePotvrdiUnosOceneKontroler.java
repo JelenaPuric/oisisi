@@ -36,8 +36,9 @@ public class DugmePotvrdiUnosOceneKontroler extends AbstractAction {
 		int ind= MyWindow.getInstance().getCentralniPanel().getTblStudenti().getSelectedRow();
 		Student s= MyWindow.getInstance().getModel().getStudenti().get(ind);
 		
-		int indexp= MyWindow.getInstance().getCentralniPanel().getTblPredmeti().getSelectedRow();
-		Predmet p=MyWindow.getInstance().getModel().getPredmeti().get(indexp);
+		
+		int indexp= ProzorIzmenaStudenta.getInstance().getNepolozeniPanel().getTblNepolozeni().getSelectedRow();
+		Predmet p=s.getNepolozeniPredmeti().get(indexp);
 		
 		int index= ProzorUnosOcene.getInstance().getOcena().getSelectedIndex();
 		if(index==0)
@@ -65,12 +66,14 @@ public class DugmePotvrdiUnosOceneKontroler extends AbstractAction {
 		
 		Ocena o= new Ocena(s,p, ocena, dat);
 		s.getOcjene().add(o);
-		s.removePredmet(p.getSifraPredmeta());
+		s.getNepolozeniPredmeti().remove(indexp);
+		//s.removePredmet(p.getSifraPredmeta());
 		int indexP=ProzorIzmenaStudenta.getInstance().getNepolozeniPanel().getTblNepolozeni().getSelectedRow();
 		
 		ProzorIzmenaStudenta.getInstance().getNepolozeniPanel().getDtmNepolozeni().removeRow(indexp);
 		Object[] rowData= {p.getSifraPredmeta(), p.getNazivPredmeta(), p.getEspBodovi(), o.getVrijednostOcjene(), o.getDatumPolaganjaPredmeta()};
 		ProzorIzmenaStudenta.getInstance().getPolozeniPanel().getDtmPolozeni().addRow(rowData);
+		PolozeniPanel.Izracunaj();
 	}
 
 }

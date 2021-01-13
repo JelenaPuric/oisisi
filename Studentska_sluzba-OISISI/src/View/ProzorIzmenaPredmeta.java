@@ -19,6 +19,7 @@ import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 import Kontroleri.DodavanjeProfesoraNaPredmetKontroler;
+import Kontroleri.DugmePotvrdiUklanjanjeProfSaPredmeta;
 import Kontroleri.PotvrdiIzmenuPredmetaKontroler;
 
 public class ProzorIzmenaPredmeta extends JFrame 

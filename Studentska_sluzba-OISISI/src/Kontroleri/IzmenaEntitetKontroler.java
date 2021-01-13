@@ -72,6 +72,7 @@ public class IzmenaEntitetKontroler extends AbstractAction
 					ProzorIzmenaStudenta.getInstance().getNacinFinansiranja().setSelectedIndex(1);
 				}
 				
+					ProzorIzmenaStudenta.popuniPolozene();
 				    ProzorIzmenaStudenta.popuniNepolozene();
 				    PolozeniPanel.Izracunaj();
 					ProzorIzmenaStudenta.getInstance().show();

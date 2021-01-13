@@ -25,6 +25,7 @@ public class Student implements Serializable {
 	private double prosjecnaOcjena;
 	private ArrayList<Ocena> ocjene;
 	private ArrayList<Predmet> nepolozeniPredmeti;
+	private ArrayList<Ocena> polozeniPredmeti;
 
 	
 	public Student(String prezime, String ime, LocalDateTime datumRodjenja, String adresaStanovanja, String telefon,
@@ -42,6 +43,7 @@ public class Student implements Serializable {
 		this.status = status;
 		this.ocjene=new ArrayList<Ocena>();
 		this.nepolozeniPredmeti=new ArrayList<Predmet>();
+		this.polozeniPredmeti=new ArrayList<Ocena>();
 	}
 	
 	
@@ -133,6 +135,19 @@ public class Student implements Serializable {
 		this.ocjene = ocjene;
 	}
 	
+	
+	public ArrayList<Ocena> getPolozeniPredmeti() {
+		return polozeniPredmeti;
+	}
+
+
+
+	public void setPolozeniPredmeti(ArrayList<Ocena> polozeniPredmeti) {
+		this.polozeniPredmeti = polozeniPredmeti;
+	}
+
+
+
 	public void removePredmet(String sifra) 
 	{
 		
@@ -144,6 +159,7 @@ public class Student implements Serializable {
 			}
 		}
 	}
+	
 	
 	
 

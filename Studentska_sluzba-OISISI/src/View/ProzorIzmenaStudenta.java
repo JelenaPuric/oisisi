@@ -455,6 +455,7 @@ public class ProzorIzmenaStudenta extends JFrame
 		this.nepolozeniPanel = nepolozeniPanel;
 	}
 	
+	
 	public static void popuniNepolozene()
 	{
 		int ind = MyWindow.getInstance().getCentralniPanel().getTblStudenti().getSelectedRow();
@@ -467,6 +468,17 @@ public class ProzorIzmenaStudenta extends JFrame
 		}
 	}
 	
+	public static void popuniPolozene()
+	{
+		int index= MyWindow.getInstance().getCentralniPanel().getTblStudenti().getSelectedRow();
+		Student s= MyWindow.getInstance().getModel().getStudenti().get(index);
+		ArrayList<Ocena> ocene= s.getPolozeniPredmeti();
+		for(Ocena o : ocene)
+		{
+			Object[] data= {o.getPredmet().getSifraPredmeta(), o.getPredmet().getNazivPredmeta(), o.getPredmet().getEspBodovi(), o.getVrijednostOcjene(), o.getDatumPolaganjaPredmeta() };
+			ProzorIzmenaStudenta.getInstance().getPolozeniPanel().getDtmPolozeni().addRow(data);
+		}
+	}
 	
 	 
 }
