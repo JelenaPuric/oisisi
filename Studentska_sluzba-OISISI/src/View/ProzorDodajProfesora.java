@@ -70,6 +70,7 @@ public class ProzorDodajProfesora extends JFrame{
 		JPanel mainPanel= new JPanel();
 		setPreferredSize(new Dimension(800,600));
 		pack();
+		setLocationRelativeTo(null);
 		mainPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
 		
 		add(mainPanel,BorderLayout.CENTER);

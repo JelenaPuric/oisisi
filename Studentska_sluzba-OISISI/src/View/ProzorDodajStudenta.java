@@ -53,11 +53,13 @@ public class ProzorDodajStudenta extends JFrame
   public ProzorDodajStudenta()
   {
 	  setTitle("Dodavanje studenta");
+	  
 	 
 	  setLayout(new BorderLayout());
 	  JPanel mainPanel=new JPanel();
 	  setPreferredSize(new Dimension(600,500));
 	  pack();
+	  
 	  setLocationRelativeTo(null);
 	  
 	  mainPanel.setLayout(new BoxLayout(mainPanel,BoxLayout.Y_AXIS));	  
