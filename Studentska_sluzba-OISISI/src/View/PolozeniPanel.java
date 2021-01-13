@@ -135,7 +135,7 @@ public static void Izracunaj()
 		suma+=o.getVrijednostOcjene();
 		espb=o.getPredmet().getEspBodovi();
 	}
-	double p;
+	double p=0;
 	if(ocene.size()==0) 
 	{
 		p=0;
