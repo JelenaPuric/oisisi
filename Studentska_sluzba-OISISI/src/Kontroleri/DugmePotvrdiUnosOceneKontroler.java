@@ -66,6 +66,8 @@ public class DugmePotvrdiUnosOceneKontroler extends AbstractAction {
 		
 		Ocena o= new Ocena(s,p, ocena, dat);
 		s.getOcjene().add(o);
+		o.setStudent(s);
+		System.out.println(s.getOcjene().size());
 		s.getNepolozeniPredmeti().remove(indexp);
 		//s.removePredmet(p.getSifraPredmeta());
 		int indexP=ProzorIzmenaStudenta.getInstance().getNepolozeniPanel().getTblNepolozeni().getSelectedRow();

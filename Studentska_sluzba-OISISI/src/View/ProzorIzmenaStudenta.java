@@ -472,10 +472,15 @@ public class ProzorIzmenaStudenta extends JFrame
 	{
 		int index= MyWindow.getInstance().getCentralniPanel().getTblStudenti().getSelectedRow();
 		Student s= MyWindow.getInstance().getModel().getStudenti().get(index);
-		for(Ocena o : s.getPolozeniPredmeti())
+		ArrayList<Ocena> ocene=s.getOcjene();
+		for(Ocena o : ocene)
 		{
-			Object[] data= {o.getPredmet().getSifraPredmeta(), o.getPredmet().getNazivPredmeta(), o.getPredmet().getEspBodovi(), o.getVrijednostOcjene(), o.getDatumPolaganjaPredmeta() };
-			ProzorIzmenaStudenta.getInstance().getPolozeniPanel().getDtmPolozeni().addRow(data);
+			
+				Object[] data= {o.getPredmet().getSifraPredmeta(), o.getPredmet().getNazivPredmeta(), o.getPredmet().getEspBodovi(), o.getVrijednostOcjene(), o.getDatumPolaganjaPredmeta() };
+				ProzorIzmenaStudenta.getInstance().getPolozeniPanel().getDtmPolozeni().addRow(data);
+				
+				
+			
 		}
 	}
 	
