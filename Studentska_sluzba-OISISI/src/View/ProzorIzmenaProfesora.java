@@ -186,6 +186,17 @@ public class ProzorIzmenaProfesora extends JFrame{
 		  
 		  JPanel pnlb= new JPanel();
 
+		  dodaj= new JButton(new DugmeDodajPredmetKontroler());
+		  ukloni= new JButton(new UklanjanjePredmetaSaProfesoraKontroler());
+		  
+		  pnlb.add(dodaj);
+		  pnlb.add(ukloni);
+		  
+		  
+		  
+		  
+		  Object[] naslovi= {"Sifra", "Naziv","Godina studija","Semestar" };
+		  dtmPredmeti= new DefaultTableModel(naslovi,0);
 		  
 		  tabbedPane=new JTabbedPane();
 		  setLayout(new BorderLayout());
