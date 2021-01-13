@@ -29,6 +29,7 @@ public class DugemPotvrdiDodavanjePredmetaProfesoruKontroler extends AbstractAct
 		prof.getProfNaPredmetima().add(p);
 		Object[] rowData= {p.getSifraPredmeta(),p.getNazivPredmeta(),p.getGodinaStudija(),p.getSemestar()};
 		ProzorIzmenaProfesora.getInstance().getDtmPredmeti().addRow(rowData);
+		
 
 	}
 	
@@ -40,4 +41,5 @@ public class DugemPotvrdiDodavanjePredmetaProfesoruKontroler extends AbstractAct
 		super("Potvdi");
 	}
 
+	
 }

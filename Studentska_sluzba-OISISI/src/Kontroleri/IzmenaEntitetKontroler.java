@@ -103,6 +103,7 @@ public class IzmenaEntitetKontroler extends AbstractAction
 					ProzorIzmenaProfesora.getInstance().getCmbTitula().setSelectedIndex(indexT);
 					int indexZ= ProzorIzmenaProfesora.getInstance().getCmbZvanje().getSelectedIndex();
 					ProzorIzmenaProfesora.getInstance().getCmbZvanje().setSelectedIndex(indexZ);
+					ProzorIzmenaProfesora.PopuniPredmeteProfesoru();
 				ProzorIzmenaProfesora.getInstance().show();
 				}
 			}
