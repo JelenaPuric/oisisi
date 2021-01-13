@@ -3,6 +3,7 @@ package Kontroleri;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
+import File.Configuartion;
 import File.ReadWrite;
 import View.CentralniPanel;
 
@@ -11,7 +12,7 @@ public class WindowListener extends WindowAdapter{
 	public void windowOpened(WindowEvent e) 
 	{
 		
-		ReadWrite.citajFile("C:\\Users\\korisnik\\Documents\\GitHub\\oisisi\\Studentska_sluzba-OISISI\\src\\Data\\data.ss");
+		ReadWrite.citajFile(Configuartion.resourcesPath+"/data.ss");
 		CentralniPanel.loadTableStudenti();
 		CentralniPanel.loadTableProfesor();
 		CentralniPanel.loadTablePredmeti();
