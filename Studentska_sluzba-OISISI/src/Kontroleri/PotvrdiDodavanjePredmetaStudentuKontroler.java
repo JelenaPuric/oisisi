@@ -34,7 +34,7 @@ public class PotvrdiDodavanjePredmetaStudentuKontroler extends AbstractAction
 			
 			
 			Object[] data= {p.getSifraPredmeta(),p.getNazivPredmeta(),p.getEspBodovi(),p.getGodinaStudija(),p.getSemestar()};
-			ProzorIzmenaStudenta.getInstance().getDtmNepolozeni().addRow(data);
+			ProzorIzmenaStudenta.getInstance().getNepolozeniPanel().getDtmNepolozeni().addRow(data);
 		}
 		DodavanjePredmetaStudentu.getInstance().dispose();
 		
