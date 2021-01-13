@@ -24,6 +24,7 @@ public class PotvrdiPonistavanjeOceneKontroler extends AbstractAction
 		int indStud=MyWindow.getInstance().getCentralniPanel().getTblStudenti().getSelectedRow();
 		Student s= MyWindow.getInstance().getModel().getStudenti().get(indStud);
 		s.getOcjene().remove(index);
+		ProzorIzmenaStudenta.getInstance().getPolozeniPanel().getDtmPolozeni().removeRow(index);
 		PonistavanjeOcene.getInstance().dispose();
 	}
 
