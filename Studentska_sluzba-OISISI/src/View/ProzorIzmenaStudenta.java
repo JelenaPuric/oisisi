@@ -19,6 +19,7 @@ import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 import Kontroleri.DugmePotvrdiIzmenaKontroler;
+import Model.Ocena;
 import Model.Predmet;
 import Model.Student;
 
@@ -465,5 +466,7 @@ public class ProzorIzmenaStudenta extends JFrame
 			ProzorIzmenaStudenta.getInstance().getDtmNepolozeni().addRow(data);
 		}
 	}
+	
+	
 	 
 }

@@ -2,6 +2,7 @@ package View;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.util.ArrayList;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -12,14 +13,16 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 import Kontroleri.PonistavanjeOceneKontroler;
+import Model.Ocena;
+import Model.Student;
 
 public class PolozeniPanel extends JPanel
 {
 	private JButton btnPonistiOcenu;
 	private JTable tblPolozeni;
 	private DefaultTableModel dtmPolozeni;
-	private JLabel prosecnaOcena;
-	private JLabel ukupnoEspb;
+	private static JLabel prosecnaOcena;
+	private static JLabel ukupnoEspb;
 	
 	
 public PolozeniPanel()
@@ -115,6 +118,33 @@ public void setDtmPolozeni(DefaultTableModel dtmPolozeni) {
 }
 
 
+public static void Izracunaj() 
+{
+	double suma=0;
+	int espb=0;
+	int index=MyWindow.getInstance().getCentralniPanel().getTblStudenti().getSelectedRow();
+	if(index==-1) 
+	{
+		return;
+	}
+	
+	Student s=MyWindow.getInstance().getModel().getStudenti().get(index);
+	ArrayList<Ocena> ocene=s.getOcjene();
+	for(Ocena o: ocene) 
+	{
+		suma+=o.getVrijednostOcjene();
+		espb=o.getPredmet().getEspBodovi();
+	}
+	double p;
+	if(ocene.size()==0) 
+	{
+		p=0;
+	}
+	 p=suma/ocene.size();
+	prosecnaOcena.setText("Prosecna ocena: "+p);
+	ukupnoEspb.setText("ESPB :"+espb);
+	
+}
 
 
 }
