@@ -204,6 +204,7 @@ public class ProzorIzmenaProfesora extends JFrame{
 		  setPreferredSize(new Dimension(800,600));
 		  pack();
 		  
+		  setLocationRelativeTo(null);
 		  
 		    JPanel p= new JPanel();
 		    p.setLayout(new BorderLayout());
