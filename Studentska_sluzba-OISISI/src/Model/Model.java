@@ -13,14 +13,58 @@ public class Model implements Serializable{
 	private ArrayList<Ocena> ocene;
 	private ArrayList<Student> studenti;
 	private ArrayList<Profesor> profesori;
+	private ArrayList<Predmet> predmeti;
 
 	public Model() 
 	{
 		ocene= new ArrayList<Ocena>();
 		profesori= new ArrayList<Profesor>();
 		studenti=new ArrayList<Student>();
+		predmeti= new ArrayList<Predmet>();
 	}
 	
+	public boolean dodajPredmet(Predmet p)
+	{
+		for(int i=0; i<predmeti.size(); i++)
+		{
+			if(predmeti.get(i).getSifraPredmeta().equals(p.getSifraPredmeta()))
+			{
+				return false;
+			}
+			
+		
+		}
+		predmeti.add(p);
+		return true;
+	}
+	
+	
+	public boolean izbrisiPredmet(Predmet p)
+	{
+		for(int i=0; i<predmeti.size(); i++)
+		{
+			if(predmeti.get(i).getSifraPredmeta().equals(p.getSifraPredmeta()))
+			{
+				predmeti.remove(p);
+				return true;
+			}
+		}
+	return false;
+	}
+	
+	public Predmet nadjiPredmet(String sifraPredmeta)
+	{
+		for(int i=0;i<predmeti.size();i++)
+		{
+				if(predmeti.get(i).getSifraPredmeta().equals(sifraPredmeta))
+					{
+						return predmeti.get(i);
+
+						}
+
+	}
+	return null;
+	}
 	
 
 	public boolean dodajProfesora(Profesor p)
@@ -137,6 +181,14 @@ public class Model implements Serializable{
 
 	public void setProfesori(ArrayList<Profesor> profesori) {
 		this.profesori = profesori;
+	}
+
+	public ArrayList<Predmet> getPredmeti() {
+		return predmeti;
+	}
+
+	public void setPredmeti(ArrayList<Predmet> predmeti) {
+		this.predmeti = predmeti;
 	}
 
 
