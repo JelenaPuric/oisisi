@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 
 import Enums.TrenutnaGodina;
+import File.Configuartion;
 import Enums.Semestar;
 import Enums.Status;
 import Model.Predmet;
@@ -23,7 +24,7 @@ public class IzmenaEntitetKontroler extends AbstractAction
 
 	public  IzmenaEntitetKontroler() 
 	{
-		super("Izmeni");
+		super("",Configuartion.editIcon);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -72,6 +73,7 @@ public class IzmenaEntitetKontroler extends AbstractAction
 					ProzorIzmenaStudenta.getInstance().getNacinFinansiranja().setSelectedIndex(1);
 				}
 				
+				System.out.println("bbb");
 					ProzorIzmenaStudenta.popuniPolozene();
 				    ProzorIzmenaStudenta.popuniNepolozene();
 				    PolozeniPanel.Izracunaj();
