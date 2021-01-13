@@ -6,6 +6,7 @@ import javax.swing.AbstractAction;
 
 import Model.Predmet;
 import View.MyWindow;
+import View.ProzorIzmenaStudenta;
 import View.ProzorUnosOcene;
 
 public class DugmePolaganjeKontroler extends AbstractAction{
@@ -14,7 +15,7 @@ public class DugmePolaganjeKontroler extends AbstractAction{
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
-		int indexp= MyWindow.getInstance().getCentralniPanel().getTblPredmeti().getSelectedRow();
+		int indexp= ProzorIzmenaStudenta.getInstance().getNepolozeniPanel().getTblNepolozeni().getSelectedRow();
 		Predmet p=MyWindow.getInstance().getModel().getPredmeti().get(indexp);
 		ProzorUnosOcene.getInstance().getTxtSifra().setText(p.getSifraPredmeta());
 		ProzorUnosOcene.getInstance().getTxtSifra().setEditable(false);
