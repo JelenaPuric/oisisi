@@ -58,6 +58,7 @@ public class ProzorDodajStudenta extends JFrame
 	  JPanel mainPanel=new JPanel();
 	  setPreferredSize(new Dimension(600,500));
 	  pack();
+	  setLocationRelativeTo(null);
 	  
 	  mainPanel.setLayout(new BoxLayout(mainPanel,BoxLayout.Y_AXIS));	  
 	  JPanel pnlIme=new JPanel();
