@@ -46,7 +46,7 @@ public class ProzorDodavanjePredmetaProfesoru extends JFrame {
 		setPreferredSize(new Dimension(400,400));
 		  pack();
 		
-		
+		setLocationRelativeTo(null);
 		
 		this.setLayout(new BorderLayout());
 		
