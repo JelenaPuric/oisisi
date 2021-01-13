@@ -62,6 +62,7 @@ public class ProzorDodajPredmet extends JFrame{
 		JPanel mainPanel= new JPanel();
 		setPreferredSize(new Dimension(400,400));
 		pack();
+		setLocationRelativeTo(null);
 		mainPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
 		
 		add(mainPanel,BorderLayout.CENTER);
