@@ -34,7 +34,7 @@ public class MyWindow extends JFrame  {
 		  setPreferredSize(new Dimension(700,600));
 		  this.addWindowListener(new Kontroleri.WindowListener());
 		  pack();
-		  
+		  setLocationRelativeTo(null);
 		  setJMenuBar(new MenuBar());
 		  model=new Model();
 		  toolBar= new ToolBar();
