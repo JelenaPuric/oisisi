@@ -51,7 +51,7 @@ public class CentralniPanel extends JPanel{
 		
 		
 		tblStudenti.setAutoCreateRowSorter(true);
-		
+		tblProfesori.setAutoCreateRowSorter(true);
 		
 		
 		JScrollPane spStudenti= new JScrollPane(tblStudenti);
