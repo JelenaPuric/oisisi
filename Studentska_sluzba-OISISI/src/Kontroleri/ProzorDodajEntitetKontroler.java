@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
 
+import File.Configuartion;
 import View.ProzorDodajStudenta;
 import View.ProzorDodajPredmet;
 import View.ProzorDodajProfesora;
@@ -37,7 +38,7 @@ public class ProzorDodajEntitetKontroler extends AbstractAction{
 	public ProzorDodajEntitetKontroler()
 	{
 		 
-		super("Dodaj");
+		super("",Configuartion.addIcon);
 	}
 
 }

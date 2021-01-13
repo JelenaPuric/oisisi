@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
 
+import File.Configuartion;
 import View.MyWindow;
 import View.ProzorObrisiEntitet;
 
@@ -52,7 +53,7 @@ public class ProzorObrisiKontroler extends AbstractAction {
 	
 	public ProzorObrisiKontroler()
 	{
-		super("Obrisi");
+		super("",Configuartion.deleteIcon);
 	}
 
 }
