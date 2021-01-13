@@ -12,7 +12,7 @@ public class WindowListener extends WindowAdapter{
 	public void windowOpened(WindowEvent e) 
 	{
 		
-		ReadWrite.citajFile(Configuartion.resourcesPath+"/data.ss");
+		ReadWrite.citajFile(Configuartion.resourcesPath+"data.ss");
 		CentralniPanel.loadTableStudenti();
 		CentralniPanel.loadTableProfesor();
 		CentralniPanel.loadTablePredmeti();
@@ -22,7 +22,7 @@ public class WindowListener extends WindowAdapter{
 	
 	public void windowClosing(WindowEvent e)
 	{
-		ReadWrite.pisiFile(Configuartion.resourcesPath+"/data.ss");
+		ReadWrite.pisiFile(Configuartion.resourcesPath+"data.ss");
 	}
 
 }
