@@ -12,12 +12,57 @@ public class Model implements Serializable{
 	private static final long serialVersionUID = 7535166678034277659L;
 	private ArrayList<Ocena> ocene;
 	private ArrayList<Student> studenti;
+	private ArrayList<Profesor> profesori;
 
 	public Model() 
 	{
 		ocene= new ArrayList<Ocena>();
-		
+		profesori= new ArrayList<Profesor>();
 		studenti=new ArrayList<Student>();
+	}
+	
+	
+
+	public boolean dodajProfesora(Profesor p)
+	{
+		for(int i=0; i<profesori.size(); i++)
+		{
+			if(profesori.get(i).getBrojLicneKarte().equals(p.getBrojLicneKarte()))
+			{
+				return false;
+			}
+			
+		
+		}
+		profesori.add(p);
+		return true;
+	}
+	
+	public Profesor nadjiProfesora(String brojLicneKarte )
+	{
+		System.out.println(brojLicneKarte);
+	for(int i=0;i<profesori.size();i++)
+	{
+		System.out.println(profesori.get(i).getBrojLicneKarte());
+		if(profesori.get(i).getBrojLicneKarte().equals(brojLicneKarte))
+		{
+			return profesori.get(i);
+		}
+	}
+	return null;
+	}
+	
+	public  boolean izbrisiProfesora(Profesor p)
+	{
+		for(int i=0; i<profesori.size(); i++)
+		{	
+			if(profesori.get(i).getBrojLicneKarte().equals(p.getBrojLicneKarte()))
+			{
+				studenti.remove(p);
+				return true;
+			}
+		}
+	return false;
 	}
 	
 	
@@ -59,9 +104,8 @@ public class Model implements Serializable{
 	}
 	
 
-	}
-	return null;
-	}
+	
+	
 
 
 	public ArrayList<Ocena> getOcene() {
@@ -81,6 +125,18 @@ public class Model implements Serializable{
 
 	public void setStudenti(ArrayList<Student> studenti) {
 		this.studenti = studenti;
+	}
+
+
+
+	public ArrayList<Profesor> getProfesori() {
+		return profesori;
+	}
+
+
+
+	public void setProfesori(ArrayList<Profesor> profesori) {
+		this.profesori = profesori;
 	}
 
 
