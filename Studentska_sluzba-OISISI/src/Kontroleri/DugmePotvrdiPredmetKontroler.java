@@ -59,9 +59,9 @@ public class DugmePotvrdiPredmetKontroler extends AbstractAction {
 		
 		
 		
-		System.out.println(sifraPredmeta+" "+nazivPredmeta);
 		
 		Predmet pr=new Predmet(sifraPredmeta,nazivPredmeta,semestar,godina,predmetniProfesor,ESPB);
+		System.out.println(sifraPredmeta+" "+nazivPredmeta);
 		if(MyWindow.getInstance().getModel().dodajPredmet(pr)==true)
 		{
 			System.out.println("Usao");

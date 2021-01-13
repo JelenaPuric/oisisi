@@ -20,14 +20,14 @@ public class DugmePotvrdiIzmenuProfesora extends AbstractAction{
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
-		String ime=ProzorDodajProfesora.getInstance().getTxtIme().getText();
-		String prezime=ProzorDodajProfesora.getInstance().getTxtPrezime().getText();
-		String datumRodjenja=ProzorDodajProfesora.getInstance().getTxtDatumRodjenja().getText();
-		String adresaStanovanja=ProzorDodajProfesora.getInstance().getTxtAdresaStanovanja().getText();
-		String brojTelefona=ProzorDodajProfesora.getInstance().getTxtBrojTelefona().getText();
-		String mail=ProzorDodajProfesora.getInstance().getTxtEmail().getText();
-		String adresaKancelarije=ProzorDodajProfesora.getInstance().getTxtAdresaStanovanja().getText();
-		String brojLicneKarte=ProzorDodajProfesora.getInstance().getTxtBrojLicneKarte().getText();
+		String ime=ProzorIzmenaProfesora.getInstance().getTxtIme().getText();
+		String prezime=ProzorIzmenaProfesora.getInstance().getTxtPrezime().getText();
+		String datumRodjenja=ProzorIzmenaProfesora.getInstance().getTxtDatumRodjenja().getText();
+		String adresaStanovanja=ProzorIzmenaProfesora.getInstance().getTxtAdresaStanovanja().getText();
+		String brojTelefona=ProzorIzmenaProfesora.getInstance().getTxtKontaktTelefon().getText();
+		String mail=ProzorIzmenaProfesora.getInstance().getTxtEmail().getText();
+		String adresaKancelarije=ProzorIzmenaProfesora.getInstance().getTxtAdresaStanovanja().getText();
+		String brojLicneKarte=ProzorIzmenaProfesora.getInstance().getTxtBrojLicneKarte().getText();
 
 		
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");

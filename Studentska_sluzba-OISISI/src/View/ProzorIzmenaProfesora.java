@@ -15,6 +15,7 @@ import javax.swing.JTabbedPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.text.JTextComponent;
 
 import Kontroleri.DugmeDodajPredmetKontroler;
 import Kontroleri.DugmeOdustaniIzmenuProfesoraKontroler;
@@ -436,7 +437,24 @@ public class ProzorIzmenaProfesora extends JFrame{
 	public void setLblBrojLicneKarte(JLabel lblBrojLicneKarte) {
 		this.lblBrojLicneKarte = lblBrojLicneKarte;
 	}
-	  
+
+	public JButton getDodaj() {
+		return dodaj;
+	}
+
+	public void setDodaj(JButton dodaj) {
+		this.dodaj = dodaj;
+	}
+
+	public JButton getUkloni() {
+		return ukloni;
+	}
+
+	public void setUkloni(JButton ukloni) {
+		this.ukloni = ukloni;
+	}
+
+	
 	  
 	  
 	  

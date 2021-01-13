@@ -46,7 +46,7 @@ public class Model implements Serializable{
 	{
 		for(int i=0; i<ocene.size(); i++)
 		{
-			if(ocena.getPredmet().getSifraPredmeta()==ocene.get(i).getPredmet().getSifraPredmeta()) 
+			if(ocena.getPredmet().getSifraPredmeta().equals(ocene.get(i).getPredmet().getSifraPredmeta())) 
 			{
 				if(ocena.getStudent().getIndex()==ocene.get(i).getStudent().getIndex()) 
 				{
@@ -143,7 +143,7 @@ public class Model implements Serializable{
 	{
 	for(int i=0;i<profesori.size();i++)
 	{
-	if(profesori.get(i).getBrojLicneKarte()==brojLicneKarte)
+	if(profesori.get(i).getBrojLicneKarte().equals(brojLicneKarte))
 	{
 	return profesori.get(i);
 	}
@@ -156,7 +156,7 @@ public class Model implements Serializable{
 	{
 	for(int i=0;i<predmeti.size();i++)
 	{
-	if(predmeti.get(i).getSifraPredmeta()==sifraPredmeta)
+	if(predmeti.get(i).getSifraPredmeta().equals(sifraPredmeta))
 	{
 	return predmeti.get(i);
 
