@@ -12,6 +12,7 @@ import Model.Predmet;
 import Model.Profesor;
 import Model.Student;
 import View.MyWindow;
+import View.PolozeniPanel;
 import View.ProzorIzmenaPredmeta;
 import View.ProzorIzmenaProfesora;
 import View.ProzorIzmenaStudenta;
@@ -72,6 +73,7 @@ public class IzmenaEntitetKontroler extends AbstractAction
 				}
 				
 				    ProzorIzmenaStudenta.popuniNepolozene();
+				    PolozeniPanel.Izracunaj();
 					ProzorIzmenaStudenta.getInstance().show();
 				
 			}
