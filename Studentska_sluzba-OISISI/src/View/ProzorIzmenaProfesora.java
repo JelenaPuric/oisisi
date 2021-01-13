@@ -3,6 +3,7 @@ package View;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.util.ArrayList;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -22,6 +23,7 @@ import Kontroleri.DugmeOdustaniIzmenuProfesoraKontroler;
 import Kontroleri.DugmePotvrdiIzmenuProfesora;
 import Kontroleri.UklanjanjePredmetaSaProfesoraKontroler;
 import Model.Predmet;
+import Model.Profesor;
 
 public class ProzorIzmenaProfesora extends JFrame{
 	
@@ -220,6 +222,24 @@ public class ProzorIzmenaProfesora extends JFrame{
 		
 		  
 	  }
+	 
+	public static void PopuniPredmeteProfesoru()
+	{
+		int index=MyWindow.getInstance().getCentralniPanel().getTblProfesori().getSelectedRow();
+		if(index==-1) 
+		{
+			return ;
+		}
+		Profesor p=MyWindow.getInstance().getModel().getProfesori().get(index);
+		ArrayList<Predmet> predmeti=p.getProfNaPredmetima();
+		for(Predmet pred : predmeti) 
+		{
+			
+			Object[] data= {pred.getSifraPredmeta(),pred.getNazivPredmeta(),pred.getGodinaStudija(),pred.getSemestar()};
+			ProzorIzmenaProfesora.getInstance().getDtmPredmeti().addRow(data);
+		}
+		
+	}
 
 	public JTabbedPane getTabbedPane() {
 		return tabbedPane;
