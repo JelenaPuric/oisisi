@@ -45,6 +45,7 @@ private static ProzorObrisiEntitet instance;
 		JPanel mainPanel= new JPanel();
 		setPreferredSize(new Dimension(350,270));
 		pack();
+		setLocationRelativeTo(null);
 		mainPanel.setLayout(new BoxLayout(mainPanel,BoxLayout.Y_AXIS));
 		add(mainPanel,BorderLayout.CENTER);
 		
