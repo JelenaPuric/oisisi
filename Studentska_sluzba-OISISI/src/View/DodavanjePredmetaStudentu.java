@@ -41,6 +41,7 @@ public class DodavanjePredmetaStudentu extends JFrame
 	   setTitle("Dodavanje predmeta");
 	   setPreferredSize(new Dimension(450,400));
 		pack();
+		setLocationRelativeTo(null);
 	   setLayout(new BorderLayout());
 	   JPanel mainPanel=new JPanel();
 	   mainPanel.setLayout(new BorderLayout());
