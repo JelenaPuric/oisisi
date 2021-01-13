@@ -463,7 +463,7 @@ public class ProzorIzmenaStudenta extends JFrame
 		for(Predmet p : predmeti)
 		{
 			Object[] data = {	p.getSifraPredmeta(),p.getNazivPredmeta(),p.getEspBodovi(),p.getGodinaStudija(),p.getSemestar()};
-			ProzorIzmenaStudenta.getInstance().getDtmNepolozeni().addRow(data);
+			ProzorIzmenaStudenta.getInstance().getNepolozeniPanel().getDtmNepolozeni().addRow(data);
 		}
 	}
 	
