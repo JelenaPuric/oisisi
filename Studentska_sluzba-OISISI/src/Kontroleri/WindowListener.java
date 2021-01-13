@@ -22,7 +22,7 @@ public class WindowListener extends WindowAdapter{
 	
 	public void windowClosing(WindowEvent e)
 	{
-		ReadWrite.pisiFile("C:\\Users\\ljubi\\Documents\\GitHub\\oisisi\\Studentska_sluzba-OISISI\\src\\Data\\data.ss");
+		ReadWrite.pisiFile(Configuartion.resourcesPath+"/data.ss");
 	}
 
 }
