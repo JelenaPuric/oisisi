@@ -45,6 +45,7 @@ private static ProzorUklanjanjeProfSaPredmeta instance;
 		JPanel mainPanel= new JPanel();
 		setPreferredSize(new Dimension(300,300));
 		pack();
+	   setLocationRelativeTo(null);
 		mainPanel.setLayout(new BoxLayout(mainPanel,BoxLayout.Y_AXIS));
 		
 		add(mainPanel,BorderLayout.CENTER);
