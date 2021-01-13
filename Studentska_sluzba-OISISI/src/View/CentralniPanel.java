@@ -39,6 +39,9 @@ public class CentralniPanel extends JPanel{
 		Object[] data= {"Index", "Ime", "Prezime", "Godina studija", "Status", "Prosek"};
 		dtmStudenti= new DefaultTableModel(data,0);		
 		
+		Object[] data1= {"Ime", "Prezime", "Titula", "Zvanje"};
+		dtmProfesori= new DefaultTableModel(data1,0);
+		
 		
 		tblStudenti= new JTable(dtmStudenti);
 		tblProfesori= new JTable(dtmProfesori);
