@@ -69,8 +69,7 @@ public class Predmet implements Serializable{
 		this.nisuPoloziliPredmet = nisuPoloziliPredmet;
 	}
 	public Predmet(String sifraPredmeta, String nazivPredmeta, Semestar semestar, TrenutnaGodina godinaStudija,
-			String profesor, int espBodovi, ArrayList<Student> poloziliPredmet,
-			ArrayList<Student> nisuPoloziliPredmet) {
+			String profesor, int espBodovi) {
 		super();
 		this.sifraPredmeta = sifraPredmeta;
 		this.nazivPredmeta = nazivPredmeta;
@@ -78,15 +77,9 @@ public class Predmet implements Serializable{
 		this.godinaStudija = godinaStudija;
 		this.profesor = profesor;
 		this.espBodovi = espBodovi;
-		this.poloziliPredmet = poloziliPredmet;
-		this.nisuPoloziliPredmet = nisuPoloziliPredmet;
+		this.poloziliPredmet = new ArrayList<Student>();
+		this.nisuPoloziliPredmet = new ArrayList<Student>();
 	}
-	public Predmet(String sifraPredmeta2, String nazivPredmeta2, Semestar semestar2, TrenutnaGodina godina,
-			String predmetniProfesor, int eSPB) {
-		// TODO Auto-generated constructor stub
-	}
-	
-	
 	
 
 }

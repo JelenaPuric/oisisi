@@ -48,7 +48,6 @@ public class PotvrdiBrisanjeKontroler extends AbstractAction {
 						MyWindow.getInstance().getModel().getPredmeti().remove(ind);
 					}
 				}
-				ReadWrite.pisiFile("C:\\Users\\ljubi\\Documents\\GitHub\\oisisi\\Studentska_sluzba-OISISI\\src\\Data\\data.ss");
 				ProzorObrisiEntitet.getInstance(" ").dispose();
 				ProzorObrisiEntitet.setInstance(null);
 			}

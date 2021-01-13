@@ -24,7 +24,6 @@ public class DugmePotvrdiPredmetKontroler extends AbstractAction {
 		String nazivPredmeta=ProzorDodajPredmet.getInstance().getTxtNazivPredmeta().getText();
 		String predmetniProfesor=ProzorDodajPredmet.getInstance().getTxtProfesor().getText();
 		int ESPB=Integer.parseInt(ProzorDodajPredmet.getInstance().getTxtEspbBodovi().getText());
-		
 		String godinaStudija=(String) ProzorDodajPredmet.getInstance().getTxtGodinaStudija().getSelectedItem();
 		TrenutnaGodina godina;
 		if(godinaStudija.equals("I(prva)")) 
@@ -60,11 +59,12 @@ public class DugmePotvrdiPredmetKontroler extends AbstractAction {
 		
 		
 		
+		System.out.println(sifraPredmeta+" "+nazivPredmeta);
 		
 		Predmet pr=new Predmet(sifraPredmeta,nazivPredmeta,semestar,godina,predmetniProfesor,ESPB);
 		if(MyWindow.getInstance().getModel().dodajPredmet(pr)==true)
 		{
-			
+			System.out.println("Usao");
 		Object[] rdata= { pr.getSifraPredmeta(), pr.getNazivPredmeta(), pr.getEspBodovi(),pr.getGodinaStudija(),pr.getSemestar()};
 		MyWindow.getInstance().getCentralniPanel().getDtmPredmeti().addRow(rdata);
 		}

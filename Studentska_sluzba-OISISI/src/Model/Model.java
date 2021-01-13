@@ -107,9 +107,9 @@ public class Model implements Serializable{
 			{
 				return false;
 			}
-			predmeti.add(p);
 		
 		}
+		predmeti.add(p);
 		return true;
 	}
 	
