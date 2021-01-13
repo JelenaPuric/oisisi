@@ -6,6 +6,6 @@ import java.nio.file.Paths;
 public class Configuartion
 {
 	private static Path relativePath=Paths.get("");
-	public static String resourcesPath=relativePath.toAbsolutePath()+"/resources/";
+	public static String resourcesPath=relativePath.toAbsolutePath().toString()+"/resources/";
 
 }
